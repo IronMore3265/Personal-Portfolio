@@ -14,9 +14,9 @@ import {
 } from "@/lib/animations";
 
 const skills = [
-  { name: "MS Excel", icon: "/images/excel.svg" },
-  { name: "Power BI", icon: "/images/powerbi.svg" },
-  { name: "Python", icon: "/images/python.svg" },
+  { name: "MS Excel", icon: "/images/excel-1.svg" },
+  { name: "Power BI", icon: "/images/powerbi-1.svg" },
+  { name: "Python", icon: "/images/python-1.svg" },
   { name: "SPSS", icon: "/images/spss.svg" },
   { name: "AutoCAD", icon: "/images/autocad.svg" },
   { name: "SolidWorks", icon: "/images/solidworks.svg" },
