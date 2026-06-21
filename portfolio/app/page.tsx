@@ -75,7 +75,7 @@ export default function Home() {
               Let&apos;s Talk
             </Button>
             <Button
-              href="https://drive.google.com/your-cv-link"
+              href="https://drive.google.com/drive/folders/1G9RMjlelgP1kYhJzQmlhvO2Wg1tprSEs?usp=sharing"
               variant="secondary"
               icon="download"
               target="_blank"
@@ -307,7 +307,7 @@ export default function Home() {
               nabil.buet20@gmail.com
             </Button>
             <Button
-              href="https://linkedin.com/in/nabilfuad19"
+              href="https://www.linkedin.com/in/nabilfuad19"
               variant="secondary"
               icon="open_in_new"
               target="_blank"
