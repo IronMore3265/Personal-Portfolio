@@ -218,7 +218,7 @@ export default function Home() {
 
       {/* ===== PROJECTS PREVIEW ===== */}
       <section className="py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
-        <SectionHeading icon="view_cozy" title="Notable Projects" />
+        <SectionHeading icon="view_cozy" title="My Projects" />
         <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[280px] gap-6">
           {/* Featured Project */}
           <div className="md:col-span-2 md:row-span-2 bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high">
