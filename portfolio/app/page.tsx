@@ -17,9 +17,7 @@ const skills = [
   { name: "MS Excel", icon: "/images/excel-1.svg" },
   { name: "Power BI", icon: "/images/powerbi-1.svg" },
   { name: "Python", icon: "/images/python-1.svg" },
-  { name: "SPSS", icon: "/images/spss.svg" },
-  { name: "AutoCAD", icon: "/images/autocad.svg" },
-  { name: "SolidWorks", icon: "/images/solidworks.svg" },
+  { name: "MATLAB", icon: "/images/matlab-1.svg" },
 ];
 
 const experiences = [
