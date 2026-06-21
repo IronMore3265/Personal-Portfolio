@@ -24,7 +24,6 @@ export default function Navbar() {
   const navLinks = [
     { label: "About Me", href: "/#about" },
     { label: "My Projects", href: "/projects" },
-    { label: "Contact me", href: "/#contact" },
   ];
 
   return (
