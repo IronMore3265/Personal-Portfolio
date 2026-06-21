@@ -99,27 +99,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== EXPERIENCE SECTION ===== */}
-      <section
-        className="w-full py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden"
-        id="experience"
-      >
-        <PatternGrid className="absolute top-0 right-0 w-64 h-64 opacity-10" />
-        <div className="max-w-[1440px] mx-auto">
-          <SectionHeading icon="work" title="Experience" />
-          <div className="max-w-4xl mx-auto">
-            {experiences.map((exp, i) => (
-              <ExperienceRow key={i} {...exp} className="reveal-left" />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ===== ABOUT / EDUCATION & SKILLS ===== */}
       <section
         className="py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto"
         id="about"
       >
+        <SectionHeading icon="person" title="About Me" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Education */}
           <div className="reveal-up">
@@ -172,6 +157,22 @@ export default function Home() {
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== EXPERIENCE SECTION ===== */}
+      <section
+        className="w-full py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden"
+        id="experience"
+      >
+        <PatternGrid className="absolute top-0 right-0 w-64 h-64 opacity-10" />
+        <div className="max-w-[1440px] mx-auto">
+          <SectionHeading icon="work" title="Experience" />
+          <div className="max-w-4xl mx-auto">
+            {experiences.map((exp, i) => (
+              <ExperienceRow key={i} {...exp} className="reveal-left" />
+            ))}
           </div>
         </div>
       </section>
