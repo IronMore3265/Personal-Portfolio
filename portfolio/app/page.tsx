@@ -95,7 +95,7 @@ export default function Home() {
               width={500}
               height={500}
               priority
-              className="w-full h-full object-cover grayscale contrast-125 brightness-125"
+              className="w-full h-full object-cover grayscale-[75%] contrast-125"
             />
           </div>
         </div>
