@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     "Lean Manufacturing",
   ],
   authors: [{ name: "Nabil Fuad Raiyan" }],
+  icons: {
+    icon: "/images/N. tr.svg",
+  },
   openGraph: {
     title: "Nabil Fuad Raiyan — Portfolio",
     description:
