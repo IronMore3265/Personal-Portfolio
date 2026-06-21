@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nabil Fuad Raiyan - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;family=Geist:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"primary-fixed-dim": "#c6c6c6", "surface-container-low": "#f5f3f3", "on-primary-fixed": "#1b1b1b", primary: "#000000", "on-primary": "#ffffff", "on-tertiary-container": "#9d7b84", "inverse-primary": "#c6c6c6", "on-error-container": "#93000a", "surface-variant": "#e4e2e2", tertiary: "#000000", error: "#ba1a1a", "on-tertiary-fixed": "#2b151c", background: "#fbf9f8", "on-secondary-container": "#646561", "on-secondary-fixed": "#1b1c19", outline: "#7e7576", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#464744", "primary-fixed": "#e2e2e2", "surface-container-high": "#e9e8e7", "secondary-container": "#e3e3de", "error-container": "#ffdad6", "tertiary-fixed-dim": "#e4bcc6", "surface-container-lowest": "#ffffff", "on-background": "#1b1c1c", "on-secondary": "#ffffff", "surface-dim": "#dbdad9", "on-primary-container": "#848484", surface: "#fbf9f8", secondary: "#5e5f5b", "on-primary-fixed-variant": "#474747", "on-tertiary-fixed-variant": "#5b3f47", "primary-container": "#1b1b1b", "tertiary-fixed": "#ffd9e2", "surface-bright": "#fbf9f8", "inverse-surface": "#303031", "on-error": "#ffffff", "secondary-fixed": "#e3e3de", "on-surface-variant": "#4c4546", "surface-tint": "#5e5e5e", "secondary-fixed-dim": "#c7c7c2", "surface-container-highest": "#e4e2e2", "on-surface": "#1b1c1c", "inverse-on-surface": "#f2f0f0", "tertiary-container": "#2b151c", "surface-container": "#efeded", "outline-variant": "#cfc4c5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-desktop": "80px", "section-gap": "160px", "margin-mobile": "20px", unit: "8px", gutter: "24px"}, fontFamily: {display: ["Montserrat"], "headline-lg": ["Montserrat"], "headline-lg-mobile": ["Montserrat"], "label-mono": ["Geist"], "headline-md": ["Montserrat"], "body-lg": ["Inter"], "body-md": ["Inter"], headline: ["Montserrat"], body: ["Inter"], label: ["Geist"]}, fontSize: {display: ["72px", {lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "800"}], "headline-lg": ["48px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg-mobile": ["36px", {lineHeight: "1.2", fontWeight: "700"}], "label-mono": ["12px", {lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "500"}], "headline-md": ["32px", {lineHeight: "1.3", fontWeight: "700"}], "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .pattern-grid {
+            background-image: radial-gradient(circle, #e4e2e2 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .gradient-blob {
+            background: linear-gradient(135deg, #f5f3f3, #e4bcc6, #e4e2e2);
+            filter: blur(80px);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation -->
+<nav class="w-full top-0 sticky z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center py-unit px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<a class="font-display text-headline-md font-bold text-primary dark:text-on-primary border-b-2 border-primary tracking-tight hover:opacity-80 transition-opacity" href="#">Nabil.</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-display text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About Me</a>
+<a class="font-display text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#projects">My Projects</a>
+<a class="font-display text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact me</a>
+</div>
+<a class="hidden md:inline-flex bg-primary text-on-primary px-6 py-3 font-display font-bold text-label-mono uppercase tracking-widest hover:opacity-80 transition-opacity" href="#contact">
+                Let's Talk
+            </a>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto min-h-[819px] flex flex-col md:flex-row items-center justify-between gap-16">
+<!-- Decorative Elements -->
+<div class="absolute top-20 left-10 w-32 h-32 pattern-grid opacity-50 hidden md:block"></div>
+<div class="absolute bottom-20 right-20 w-48 h-1 bg-primary hidden md:block transform rotate-45 origin-right"></div>
+<div class="w-full md:w-1/2 z-10 relative">
+<h1 class="font-display text-headline-lg-mobile md:text-display text-primary mb-6">
+<span class="font-light">Hello!</span> <br/>
+                    I'm Nabil Fuad Raiyan
+                </h1>
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-display text-headline-md text-on-surface-variant">IPE Graduate, BUET</h2>
+</div>
+<p class="font-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    Blending Lean manufacturing and data-driven problem solving. I'm a process optimizer, data analyst, and organizational leader focused on sustainable engineering solutions.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a class="inline-flex justify-center items-center bg-primary text-on-primary px-8 py-4 font-display font-bold hover:bg-inverse-surface transition-colors group" href="#contact">
+                        Let's Talk
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="inline-flex justify-center items-center border border-outline text-primary px-8 py-4 font-display font-bold hover:bg-surface-container transition-colors" href="#">
+                        Download CV
+                        <span class="material-symbols-outlined ml-2">download</span>
+</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative flex justify-center z-10">
+<div class="absolute inset-0 gradient-blob z-0 rounded-full scale-110"></div>
+<div class="relative z-10 w-full max-w-md aspect-square bg-surface-container-high rounded-full overflow-hidden border-4 border-background">
+<img alt="Nabil Fuad Raiyan" class="w-full h-full object-cover grayscale contrast-125" data-alt="A professional headshot of a young male engineer in a bright, modern, minimalist setting. He is wearing smart casual attire, looking directly at the camera with a confident, analytical expression. The lighting is soft and high-key, creating a clean, crisp, light-mode aesthetic with subtle cream and white background tones. The overall mood is authoritative yet approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK5v4W3T60lKKhh3o-w4Le3xMBoJqkl0XC9ylopIcd8WeMU8tPJliiPSVXF4VWpLCk8-iL9evkeYz-5fFYzH6Ose7842FLRzNEz1OrA64uboE4SB10qpQZEjy1QhDEVnrMvw3XozG-iegG_vPHr_hymmRn2_zrvH6MZpeOLYme1hY8xTXerNPqhKtLp0R7tWSqqnGWtbaHPC0HzlZ_CYQsVDxOJavQcOX4Vhw7ONkJC7xmcIuTjqgHjjQjD25QDjPVTW0ukb_QPVNX20s"/>
+</div>
+</div>
+</section>
+<!-- Marquee -->
+<div class="w-full bg-primary text-on-primary py-4 border-y border-outline-variant marquee-container relative z-20">
+</div>
+<!-- Experience Block (High Contrast) -->
+<section class="w-full bg-primary text-on-primary py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden" id="experience">
+<div class="absolute top-0 right-0 w-64 h-64 pattern-grid opacity-20"></div>
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center mb-16">
+<span class="material-symbols-outlined text-4xl mb-4 opacity-50">work</span>
+<h2 class="font-display text-headline-lg-mobile md:text-headline-lg uppercase tracking-tight">Experience</h2>
+</div>
+<div class="max-w-4xl mx-auto">
+<div class="flex flex-col md:flex-row gap-8 border-t border-outline-variant py-10 group hover:bg-inverse-surface transition-colors">
+<div class="md:w-1/4 font-label-mono text-on-primary-container uppercase tracking-widest pt-2">
+                            Nov 2025
+                        </div>
+<div class="md:w-3/4">
+<h3 class="font-display text-headline-md mb-2">Industrial Training</h3>
+<p class="font-body-lg text-primary-fixed-dim mb-6">Reckitt Benckiser Bangladesh PLC</p>
+<ul class="space-y-4 font-body-md text-surface-variant">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-sm mr-3 mt-1 text-on-primary">check_circle</span>
+<span class="">Led 5S implementation on the Dettol production line, resulting in a verified +16.25% capacity increase.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-sm mr-3 mt-1 text-on-primary">check_circle</span>
+<span class="">Proposed and designed a comprehensive Harpic 5S improvement framework.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-sm mr-3 mt-1 text-on-primary">check_circle</span>
+<span class="">Applied advanced Lean methodologies including VSM (Value Stream Mapping), ECRS, and SMED.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Thesis -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Education -->
+<div>
+<h2 class="font-display text-headline-md mb-8 border-b border-outline-variant pb-4">Education</h2>
+<div class="mb-8">
+<h3 class="font-display text-body-lg font-bold">BSc in Industrial and Production Engineering</h3>
+<p class="font-body-md text-on-surface-variant">BUET (2022–2026)</p>
+</div>
+<h2 class="font-display text-headline-md mb-8 mt-16 border-b border-outline-variant pb-4">Skills</h2>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="grid grid-cols-1 gap-4 mb-6"><div class="flex items-center gap-4 p-3 border border-outline-variant bg-surface-container-low hover:border-primary transition-colors">
+<div class="w-10 h-10 flex-shrink-0">
+<img alt="Microsoft Excel" class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/AP1WRLuGU4pEUBzPoStDqlG_eOn3OmQ_AILC4c8p0SSCLaO4g--OuMNGzuhcxUGU8QEQfGXX2Ni5_gY0Ht_nBgTOxgOvRgaEA4r62DMeiiAV_VuP6N9LsrQT8VkmAIYrsfuQxwPsN1jd2qe6mbx2vZeAcs-j3Fsd0n4O11pDi-COGSVsjacEbV4yL183RGfDmUYwPY-4bHOIvLOxLIkGhjyEs4T0srboDXTKE0KY13cx1QWqgo00ay4kLbNBP54"/>
+</div>
+<span class="font-display font-bold text-body-md">MS Excel</span>
+</div>
+<div class="flex items-center gap-4 p-3 border border-outline-variant bg-surface-container-low hover:border-primary transition-colors">
+<div class="w-10 h-10 flex-shrink-0">
+<img alt="Power BI" class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/AP1WRLs9eDtXEuiuCRj4fFykTnUs292AyfJVmMS1ZRrHqHh5WrvYCdCngzgjbzkcDBnSh3Qz1OVaK1hmWof1txWu0d6QhGEs6E9UQ0SRyB58Ch3dBZhNTTkWtOvBWcajtQjcZF-wV_cXcCNqsFotISaUOlvgjZLHbYTZwlk_te71y61tdrwzji8FbJ6fRaiu_5ccHPC9HduCY10aBi3HYQifLADc9ltBFV8BBClZDi3prVm9_R8wGHcwD5hDkFDe"/>
+</div>
+<span class="font-display font-bold text-body-md">Power BI</span>
+</div>
+<div class="flex items-center gap-4 p-3 border border-outline-variant bg-surface-container-low hover:border-primary transition-colors">
+<div class="w-10 h-10 flex-shrink-0">
+<img alt="Python" class="w-full h-full object-contain grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/AP1WRLsiWxCa-e8PyiEZW6Hn8E8H3jiyzVYnp8jPp68OGll555Jm3DPaVhVPguaT2pImhyYUtEKqh9DO3w8YMjFgMzK52D2o30vWPkqNGsauXKTtrh9kFOTvJCIjyIVOZgLHCR9oaZnq1P_A3hdLrgSqmjEEqUXksBzmV4pKgZHNS0Eu7d5wu4qiY7ZdY1qmO6Ukr3cDhx57pR4q1Pvlytk_q_8lkOjwVYAfarYfbDElYCjfvc8iCZQ2EUqHSj9Q"/>
+</div>
+<span class="font-display font-bold text-body-md">Python</span>
+</div></div>
+<div class="flex flex-wrap gap-2">
+</div>
+</div>
+</div>
+</div>
+<!-- Thesis Highlight -->
+</div>
+</section>
+<!-- Stats Row -->
+<section class="border-y border-outline-variant bg-surface-bright py-16 px-margin-mobile md:px-margin-desktop">
+</section>
+<!-- Notable Projects Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto" id="projects">
+<div class="text-center mb-16">
+<span class="material-symbols-outlined text-4xl mb-4 opacity-50">view_cozy</span>
+<h2 class="font-display text-headline-lg-mobile md:text-headline-lg uppercase tracking-tight">Notable Projects</h2>
+</div><div class="flex justify-center gap-4 mb-12">
+<button class="px-8 py-3 bg-primary text-on-primary font-display font-bold text-label-mono uppercase tracking-widest transition-all border border-primary" id="btn-academic">Academic Projects</button>
+<button class="px-8 py-3 bg-surface-container text-primary font-display font-bold text-label-mono uppercase tracking-widest transition-all border border-outline-variant hover:border-primary" id="btn-software">Software-based Projects</button>
+</div><div class="hidden flex justify-center gap-8 mb-12 border-b border-outline-variant pb-4" id="software-subnav">
+<button class="font-display text-label-mono text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest">Microsoft Excel</button>
+<button class="font-display text-label-mono text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest">Power BI</button>
+<button class="font-display text-label-mono text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest">Python</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 auto-rows-[300px] gap-6"><!-- Academic Projects Group -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors academic-project">
+<div class="flex justify-between items-start">
+<span class="bg-primary text-on-primary font-label-mono px-3 py-1 uppercase text-xs">Research</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<div>
+<h3 class="font-display text-headline-md mb-4">Thesis Project: CNC Turning Optimization</h3>
+<p class="font-body-md text-on-surface-variant max-w-lg">Comprehensive study on sustainable manufacturing processes, achieving a 93% reduction in carbon emissions.</p>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors academic-project">
+<div class="flex justify-between items-start">
+<span class="bg-surface-variant font-label-mono px-3 py-1 uppercase text-xs">Competition</span>
+</div>
+<div>
+<h3 class="font-display text-body-lg font-bold mb-2">Mastermind 2.0</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Secured 1st Runners-up position in national competition.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors academic-project">
+<div class="flex justify-between items-start">
+<span class="bg-surface-variant font-label-mono px-3 py-1 uppercase text-xs">Global Case</span>
+</div>
+<div>
+<h3 class="font-display text-body-lg font-bold mb-2">ISCEA Global Supply Chain Case</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Awarded 60% Scholarship for exceptional performance.</p>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors academic-project">
+<div class="flex justify-between items-start">
+<span class="bg-surface-variant font-label-mono px-3 py-1 uppercase text-xs">Innovation</span>
+</div>
+<div>
+<h3 class="font-display text-body-lg font-bold mb-2">University Innovation Hub</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Secured pre-seed grant for innovative engineering solution.</p>
+</div>
+</div>
+<!-- Software-based Projects Group (Initially Hidden or Prepared) -->
+<div class="bg-primary text-on-primary p-8 flex flex-col justify-between group software-project">
+<div class="flex justify-between items-start">
+<span class="border border-on-primary font-label-mono px-3 py-1 uppercase text-xs">Industrial</span>
+<span class="material-symbols-outlined text-on-primary-fixed-variant group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
+</div>
+<div>
+<h3 class="font-display text-body-lg font-bold mb-2">Reckitt Benckiser 5S/Lean Project</h3>
+<p class="font-body-md text-primary-fixed-dim text-sm">Led implementation on Dettol line resulting in significant capacity boost.</p>
+</div>
+</div></div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant text-center" id="contact">
+<div class="max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary">mail</span>
+<h2 class="font-display text-display font-bold text-primary mb-8 tracking-tight">
+                    Say Hi, <br/> and let's talk data.
+                </h2>
+<p class="font-body-lg text-on-surface-variant mb-12">
+                    Have a process to optimize or data to analyze? Reach out and let's chat.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="inline-flex justify-center items-center bg-primary text-on-primary px-8 py-4 font-display font-bold hover:bg-inverse-surface transition-colors" href="mailto:nabil.buet20@gmail.com">
+                        nabil.buet20@gmail.com
+                    </a>
+<a class="inline-flex justify-center items-center border border-outline text-primary px-8 py-4 font-display font-bold hover:bg-surface-container transition-colors" href="https://linkedin.com/in/nabilfuad19" target="_blank">
+                        LinkedIn Profile
+                        <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-background dark:bg-primary-container border-t border-outline-variant transition-all duration-200">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter max-w-[1440px] mx-auto">
+<div class="text-headline-md font-bold text-primary mb-6 md:mb-0">
+                Nabil F.R.
+            </div>
+<div class="flex gap-6 mb-6 md:mb-0">
+<a class="font-display text-label-mono text-on-surface-variant hover:text-primary transition-colors underline uppercase" href="#">LinkedIn</a>
+<a class="font-display text-label-mono text-on-surface-variant hover:text-primary transition-colors underline uppercase" href="#">Email</a>
+</div>
+<div class="font-display text-label-mono text-on-surface-variant uppercase tracking-widest">
+                Personal portfolio © 2024
+            </div>
+</div>
+</footer>
+</body></html>
