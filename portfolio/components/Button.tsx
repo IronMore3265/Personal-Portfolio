@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 type ButtonVariant = "primary" | "secondary" | "inverse";
 
@@ -49,10 +49,28 @@ export default function Button({
   );
 
   if (href) {
+    const isExternal =
+      href.startsWith("http") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:");
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          target={target}
+          rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        >
+          {content}
+        </a>
+      );
+    }
+
     return (
-      <a href={href} className={classes} target={target} rel={target === "_blank" ? "noopener noreferrer" : undefined}>
+      <Link href={href} className={classes}>
         {content}
-      </a>
+      </Link>
     );
   }
 

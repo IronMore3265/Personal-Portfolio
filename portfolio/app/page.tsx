@@ -22,19 +22,6 @@ const skills = [
   { name: "SolidWorks", icon: "/images/solidworks.svg" },
 ];
 
-const marqueeItems = [
-  "Process Optimization",
-  "Data Analysis",
-  "Lean Manufacturing",
-  "Value Stream Mapping",
-  "Statistical Analysis",
-  "Supply Chain",
-  "5S Implementation",
-  "Industrial Engineering",
-  "SMED",
-  "ECRS",
-];
-
 const experiences = [
   {
     date: "Nov 2025",
@@ -103,7 +90,7 @@ export default function Home() {
           <GradientBlob className="hero-blob absolute inset-0 z-0 rounded-full scale-110" />
           <div className="hero-image relative z-10 w-full max-w-sm md:max-w-md aspect-square bg-surface-container-high rounded-full overflow-hidden border-4 border-background">
             <Image
-              src="/images/profile.jpg"
+              src="/images/profile NBL.png"
               alt="Nabil Fuad Raiyan"
               width={500}
               height={500}
@@ -113,18 +100,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ===== MARQUEE ===== */}
-      <div className="w-full bg-primary text-on-primary py-4 border-y border-outline-variant/30 marquee-container relative z-20">
-        <div className="marquee-content">
-          {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={i} className="text-label-mono mx-8 inline-block">
-              {item}
-              <span className="ml-8 opacity-30">◆</span>
-            </span>
-          ))}
-        </div>
-      </div>
 
       {/* ===== EXPERIENCE SECTION (Dark Block) ===== */}
       <section
