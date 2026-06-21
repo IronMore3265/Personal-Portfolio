@@ -95,20 +95,20 @@ export default function Home() {
               width={500}
               height={500}
               priority
-              className="w-full h-full object-cover grayscale contrast-125"
+              className="w-full h-full object-cover grayscale contrast-125 brightness-125"
             />
           </div>
         </div>
       </section>
 
-      {/* ===== EXPERIENCE SECTION (Dark Block) ===== */}
+      {/* ===== EXPERIENCE SECTION ===== */}
       <section
-        className="w-full bg-primary-container text-on-primary py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden"
+        className="w-full py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden"
         id="experience"
       >
         <PatternGrid className="absolute top-0 right-0 w-64 h-64 opacity-10" />
         <div className="max-w-[1440px] mx-auto">
-          <SectionHeading icon="work" title="Experience" light />
+          <SectionHeading icon="work" title="Experience" />
           <div className="max-w-4xl mx-auto">
             {experiences.map((exp, i) => (
               <ExperienceRow key={i} {...exp} className="reveal-left" />
