@@ -65,7 +65,7 @@ export default function Navbar() {
               href="/#contact"
               className="bg-primary text-on-primary px-6 py-3 font-display font-bold text-label-mono hover:opacity-80 transition-opacity"
             >
-              Let&apos;s Talk
+              Contact me
             </Link>
           </div>
 
@@ -120,7 +120,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen(false)}
           className="mt-4 bg-primary text-on-primary px-8 py-4 font-display font-bold text-label-mono"
         >
-          Let&apos;s Talk
+          Contact me
         </Link>
       </div>
     </>

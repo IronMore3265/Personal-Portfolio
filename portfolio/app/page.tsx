@@ -72,7 +72,7 @@ export default function Home() {
           </p>
           <div className="hero-buttons flex flex-col sm:flex-row gap-6">
             <Button href="/#contact" variant="primary" icon="arrow_forward">
-              Let&apos;s Talk
+              Contact me
             </Button>
             <Button
               href="https://drive.google.com/drive/folders/1G9RMjlelgP1kYhJzQmlhvO2Wg1tprSEs?usp=sharing"
