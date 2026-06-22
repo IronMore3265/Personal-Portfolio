@@ -193,6 +193,10 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  text-align: justify;
+}
+
 ::selection {
   background: var(--color-primary);
   color: var(--color-on-primary);
