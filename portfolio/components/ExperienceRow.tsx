@@ -18,10 +18,10 @@ export default function ExperienceRow({ date, title, company, bullets, className
         <ul className="space-y-4 text-body-md text-on-surface-variant">
           {bullets.map((bullet, i) => (
             <li key={i} className="flex items-start">
-              <span className="material-symbols-outlined text-sm mr-3 mt-1 text-primary dark:text-primary-fixed-dim">
+              <span className="material-symbols-outlined text-sm mr-3 mt-1 shrink-0 text-primary dark:text-primary-fixed-dim">
                 check_circle
               </span>
-              <span>{bullet}</span>
+              <span className="text-justify">{bullet}</span>
             </li>
           ))}
         </ul>
