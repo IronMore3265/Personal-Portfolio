@@ -130,33 +130,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Thesis Highlight */}
+          {/* Who I Am */}
           <div className="reveal-up">
             <h2 className="text-headline-md mb-8 border-b border-outline-variant pb-4 text-primary">
-              Thesis Highlight
+              Who I Am
             </h2>
-            <div className="bg-surface-container p-8 border border-outline-variant dark:bg-surface-container-high">
-              <span className="text-label-mono text-on-surface-variant block mb-4">
-                Research • 2025–2026
-              </span>
-              <h3 className="text-headline-md mb-4 text-on-surface">
-                CNC Turning Optimization
-              </h3>
-              <p className="text-body-md text-on-surface-variant mb-6">
-                Comprehensive study on sustainable manufacturing processes,
-                achieving a 93% reduction in carbon emissions through
-                optimized cutting parameters and advanced multi-objective
-                optimization algorithms.
-              </p>
-              <div className="flex gap-4 flex-wrap">
-                <span className="text-label-mono px-3 py-1 bg-surface-variant dark:bg-surface-container-highest text-on-surface-variant">
-                  Sustainable Manufacturing
-                </span>
-                <span className="text-label-mono px-3 py-1 bg-surface-variant dark:bg-surface-container-highest text-on-surface-variant">
-                  Multi-objective Optimization
-                </span>
-              </div>
-            </div>
+            <p className="text-body-md text-on-surface-variant leading-relaxed">
+              I&apos;m an Industrial and Production Engineer who&apos;s spent the last few years learning how to make systems work smarter, not just harder — manufacturing lines, supply chains, decision-making processes. My academic work focused on optimizing CNC machining parameters to cut carbon emissions, but the thread running through everything I do is using data to solve problems that actually matter, where Lean tools like 5S, VSM, and SMED meet analytics platforms like Power BI and Python. I&apos;ve led a large student engineering organization, helped my team reach the podium at a national business case competition, and secured a pre-seed grant for a product design project — experiences that taught me as much about people and execution as any classroom did. Right now, I&apos;m channeling that mix of analytical rigor and process thinking into business analytics and supply chain roles, looking for problems worth solving at scale.
+            </p>
           </div>
         </div>
       </section>
