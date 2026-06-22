@@ -135,9 +135,11 @@ export default function Home() {
             <h2 className="text-headline-md mb-8 border-b border-outline-variant pb-4 text-primary">
               Who I Am
             </h2>
-            <p className="text-body-md text-on-surface-variant leading-relaxed">
-              I&apos;m an Industrial and Production Engineer who&apos;s spent the last few years learning how to make systems work smarter, not just harder — manufacturing lines, supply chains, decision-making processes. My academic work focused on optimizing CNC machining parameters to cut carbon emissions, but the thread running through everything I do is using data to solve problems that actually matter, where Lean tools like 5S, VSM, and SMED meet analytics platforms like Power BI and Python. I&apos;ve led a large student engineering organization, helped my team reach the podium at a national business case competition, and secured a pre-seed grant for a product design project — experiences that taught me as much about people and execution as any classroom did. Right now, I&apos;m channeling that mix of analytical rigor and process thinking into business analytics and supply chain roles, looking for problems worth solving at scale.
-            </p>
+            <div className="bg-surface-container p-8 border border-outline-variant dark:bg-surface-container-high">
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                I&apos;m an Industrial and Production Engineer who&apos;s spent the last few years learning how to make systems work smarter, not just harder — manufacturing lines, supply chains, decision-making processes. My academic work focused on optimizing CNC machining parameters to cut carbon emissions, but the thread running through everything I do is using data to solve problems that actually matter, where Lean tools like 5S, VSM, and SMED meet analytics platforms like Power BI and Python. I&apos;ve led a large student engineering organization, helped my team reach the podium at a national business case competition, and secured a pre-seed grant for a product design project — experiences that taught me as much about people and execution as any classroom did. Right now, I&apos;m channeling that mix of analytical rigor and process thinking into business analytics and supply chain roles, looking for problems worth solving at scale.
+              </p>
+            </div>
           </div>
         </div>
       </section>
