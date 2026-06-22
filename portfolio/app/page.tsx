@@ -31,6 +31,26 @@ const experiences = [
       "Applied advanced Lean methodologies including VSM (Value Stream Mapping), ECRS, and SMED.",
     ],
   },
+  {
+    date: "2025 – 2026",
+    title: "General Secretary",
+    company: "Association of Industrial and Production Engineers (AIPE), BUET",
+    bullets: [
+      "Serve as the highest elected student representative of the IPE department, leading a 100+ member organization across academic and professional initiatives.",
+      "Spearhead IPE Fest and Career Fest — coordinating logistics, corporate outreach, speaker sessions, and cross-departmental collaboration.",
+      "Launched and manage the Alumni Spotlight initiative to strengthen ties between current students and IPE alumni across industry and academia.",
+      "Oversee executive committee operations, faculty liaison, budget planning, and official departmental communications.",
+    ],
+  },
+  {
+    date: "2025 – 2026",
+    title: "Assistant General Secretary",
+    company: "IEOM BUET Student Chapter",
+    bullets: [
+      "Co-organize chapter events, workshops, and industrial seminars aligned with IEOM's professional development mission.",
+      "Coordinate member engagement, inter-chapter outreach, and documentation for one of BUET's active engineering professional societies.",
+    ],
+  },
 ];
 
 export default function Home() {
