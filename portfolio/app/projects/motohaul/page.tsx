@@ -8,8 +8,7 @@ const title = "MotoHaul — Motorized Self-Unloading Wheelbarrow";
 
 const gallery = [
   "https://drive.google.com/file/d/1yffODz0dYUnrMsj2VOo693_QrxYJiguh/preview",
-  // NOTE: the ID below is not a valid Google Drive file ID — replace it
-  "https://drive.google.com/file/d/bc1qre8jdw2azrg6tf49wmp652w00xltddxmpk98xp/preview",
+  "https://drive.google.com/file/d/1FUMMmhRODH8BpxWDPknf3jjO8a8gPyEH/preview",
   "https://drive.google.com/file/d/1dmVMnGl8w-4VLK3FNkC4cPiCSbPq1AP-/preview",
 ];
 
