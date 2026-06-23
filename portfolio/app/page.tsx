@@ -332,31 +332,6 @@ export default function Home() {
             </span>
           </Link>
           <Link
-            href="/projects/econovision"
-            className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
-          >
-            <div className="flex items-start gap-5">
-              <span className="material-symbols-outlined text-4xl text-primary shrink-0">
-                emoji_events
-              </span>
-              <div>
-                <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
-                  Finalist · Top 8
-                </span>
-                <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
-                  EconoVision — National Policy-Making Competition
-                </h3>
-                <p className="text-body-md text-on-surface-variant text-sm">
-                  Advanced to the finals of a national-level policy-making
-                  competition, placing among the top 8 teams nationwide.
-                </p>
-              </div>
-            </div>
-            <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
-              arrow_outward
-            </span>
-          </Link>
-          <Link
             href="/projects/prodluxe"
             className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
           >
@@ -383,7 +358,7 @@ export default function Home() {
             </span>
           </Link>
           <Link
-            href="/projects/securemed"
+            href="/projects/econovision"
             className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
           >
             <div className="flex items-start gap-5">
@@ -392,15 +367,14 @@ export default function Home() {
               </span>
               <div>
                 <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
-                  Top 10 of 700+
+                  Finalist · Top 8
                 </span>
                 <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
-                  SecureMed — Future Bangladesh Challenge 2025
+                  EconoVision — National Policy-Making Competition
                 </h3>
                 <p className="text-body-md text-on-surface-variant text-sm">
-                  Secured a Top 10 position out of 700+ teams in a national
-                  policy-making challenge with an AI, blockchain, and IoT-based
-                  drug authentication system to combat counterfeit medicines.
+                  Advanced to the finals of a national-level policy-making
+                  competition, placing among the top 8 teams nationwide.
                 </p>
               </div>
             </div>
@@ -408,32 +382,61 @@ export default function Home() {
               arrow_outward
             </span>
           </Link>
-          <Link
-            href="/projects/securemed-visionx"
-            className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
-          >
-            <div className="flex items-start gap-5">
-              <span className="material-symbols-outlined text-4xl text-primary shrink-0">
-                emoji_events
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link
+              href="/projects/securemed"
+              className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
+            >
+              <div className="flex items-start gap-5">
+                <span className="material-symbols-outlined text-4xl text-primary shrink-0">
+                  emoji_events
+                </span>
+                <div>
+                  <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
+                    Finalist · Top 10
+                  </span>
+                  <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                    SecureMed — Future Bangladesh Challenge 2025
+                  </h3>
+                  <p className="text-body-md text-on-surface-variant text-sm">
+                    Reached finalist status in the Top 10 out of 700+ teams in a
+                    national policy-making challenge with an AI, blockchain, and
+                    IoT-based drug authentication system to combat counterfeit
+                    medicines.
+                  </p>
+                </div>
+              </div>
+              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
+                arrow_outward
               </span>
-              <div>
-                <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
-                  Finalist · Top 17
+            </Link>
+            <Link
+              href="/projects/securemed-visionx"
+              className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
+            >
+              <div className="flex items-start gap-5">
+                <span className="material-symbols-outlined text-4xl text-primary shrink-0">
+                  emoji_events
                 </span>
-                <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
-                  SecureMed — VisionX 2025
-                </h3>
-                <p className="text-body-md text-on-surface-variant text-sm">
-                  Reached finalist status among 17 teams in a national AI
-                  innovation challenge with an AI, blockchain, and IoT-based
-                  drug authentication platform.
-                </p>
+                <div>
+                  <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
+                    Finalist · Top 17
+                  </span>
+                  <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                    SecureMed — VisionX 2025
+                  </h3>
+                  <p className="text-body-md text-on-surface-variant text-sm">
+                    Reached finalist status among 17 teams in a national AI
+                    innovation challenge with an AI, blockchain, and IoT-based
+                    drug authentication platform.
+                  </p>
+                </div>
               </div>
-            </div>
-            <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
-              arrow_outward
-            </span>
-          </Link>
+              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
+                arrow_outward
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
