@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import ProjectDetailView from "@/components/ProjectDetailView";
 import type { ProjectDetail } from "@/components/ProjectDetailView";
@@ -30,7 +31,7 @@ const detail: ProjectDetail = {
 
 export default function MotoHaulPage() {
   return (
-    <div style={{ fontFamily: '"Google Sans Flex", sans-serif' }}>
+    <div style={{ fontFamily: '"Google Sans Flex", sans-serif', fontOpticalSizing: 'auto' } as React.CSSProperties}>
       {/* Page Header */}
       <section className="relative pt-16 md:pt-24 pb-8 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <PatternGrid className="absolute top-10 right-10 w-40 h-40 opacity-30 hidden md:block" />
@@ -46,8 +47,8 @@ export default function MotoHaulPage() {
             <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">
               {title}
             </h1>
-            <p className="text-label-mono text-on-surface-variant mb-1">{detail.subtitle}</p>
-            <p className="text-label-mono text-primary">{detail.role}</p>
+            <p className="text-label-mono text-on-surface-variant mb-1 text-center">{detail.subtitle}</p>
+            <p className="text-label-mono text-primary text-center">{detail.role}</p>
           </div>
         </div>
       </section>
