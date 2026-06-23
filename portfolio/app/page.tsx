@@ -331,6 +331,32 @@ export default function Home() {
               arrow_outward
             </span>
           </Link>
+          <Link
+            href="/projects/econovision"
+            className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
+          >
+            <div className="flex items-start gap-5">
+              <span className="material-symbols-outlined text-4xl text-primary shrink-0">
+                emoji_events
+              </span>
+              <div>
+                <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
+                  Finalist · Top 8 of 111
+                </span>
+                <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                  EconoVision — National Policy-Making Competition
+                </h3>
+                <p className="text-body-md text-on-surface-variant text-sm">
+                  Advanced to the finals of a national-level policy-making
+                  competition, placing among the top 8 teams out of 111
+                  nationwide.
+                </p>
+              </div>
+            </div>
+            <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
+              arrow_outward
+            </span>
+          </Link>
         </div>
       </section>
 
