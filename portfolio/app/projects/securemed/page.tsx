@@ -49,6 +49,13 @@ export default function SecureMedPage() {
             </h1>
             <p className="text-label-mono text-on-surface-variant mb-1 text-center">{detail.subtitle}</p>
             <p className="text-label-mono text-primary text-center">{detail.role}</p>
+            <Link
+              href="/projects/securemed-visionx"
+              className="inline-flex items-center gap-1.5 text-body-md text-sm text-on-surface-variant hover:text-primary transition-colors mt-4"
+            >
+              <span className="material-symbols-outlined text-sm">link</span>
+              Same core project, presented at VisionX 2025
+            </Link>
           </div>
         </div>
       </section>

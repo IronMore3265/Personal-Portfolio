@@ -408,6 +408,32 @@ export default function Home() {
               arrow_outward
             </span>
           </Link>
+          <Link
+            href="/projects/securemed-visionx"
+            className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
+          >
+            <div className="flex items-start gap-5">
+              <span className="material-symbols-outlined text-4xl text-primary shrink-0">
+                emoji_events
+              </span>
+              <div>
+                <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
+                  Finalist · Top 17
+                </span>
+                <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                  SecureMed — VisionX 2025
+                </h3>
+                <p className="text-body-md text-on-surface-variant text-sm">
+                  Reached finalist status among 17 teams in a national AI
+                  innovation challenge with an AI, blockchain, and IoT-based
+                  drug authentication platform.
+                </p>
+              </div>
+            </div>
+            <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
+              arrow_outward
+            </span>
+          </Link>
         </div>
       </section>
 
