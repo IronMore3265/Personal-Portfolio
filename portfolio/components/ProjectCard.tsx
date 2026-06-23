@@ -8,6 +8,7 @@ interface ProjectCardProps {
   description: string;
   variant?: CardVariant;
   href?: string;
+  onClick?: () => void;
   className?: string;
   colSpan?: number;
   rowSpan?: number;
@@ -43,11 +44,13 @@ export default function ProjectCard({
   description,
   variant = "light",
   href,
+  onClick,
   className = "",
   colSpan = 1,
   rowSpan = 1,
 }: ProjectCardProps) {
   const styles = variantStyles[variant];
+  const interactive = href || onClick;
 
   const spanClasses = [
     colSpan === 2 ? "md:col-span-2" : "",
@@ -56,13 +59,14 @@ export default function ProjectCard({
 
   const card = (
     <div
-      className={`${spanClasses} ${styles.card} p-8 flex flex-col justify-between group transition-colors duration-300 ${className}`}
+      onClick={onClick}
+      className={`${spanClasses} ${styles.card} p-8 flex flex-col justify-between group transition-colors duration-300 ${interactive ? "cursor-pointer" : ""} ${className}`}
     >
       <div className="flex justify-between items-start">
         <span className={`${styles.tag} text-label-mono px-3 py-1 text-xs`}>
           {tag}
         </span>
-        {href && (
+        {interactive && (
           <span
             className={`material-symbols-outlined ${styles.arrow} group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300`}
           >
