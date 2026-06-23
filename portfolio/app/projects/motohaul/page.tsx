@@ -30,11 +30,11 @@ const detail: ProjectDetail = {
 
 export default function MotoHaulPage() {
   return (
-    <div>
+    <div style={{ fontFamily: '"Google Sans Flex", sans-serif' }}>
       {/* Page Header */}
       <section className="relative pt-16 md:pt-24 pb-8 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <PatternGrid className="absolute top-10 right-10 w-40 h-40 opacity-30 hidden md:block" />
-        <div className="relative z-10 max-w-3xl">
+        <div className="relative z-10">
           <Link
             href="/projects"
             className="inline-flex items-center text-label-mono text-on-surface-variant hover:text-primary transition-colors mb-8"
@@ -42,19 +42,19 @@ export default function MotoHaulPage() {
             <span className="material-symbols-outlined mr-2 text-sm">arrow_back</span>
             Back to Projects
           </Link>
-          <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">
-            {title}
-          </h1>
-          <p className="text-label-mono text-on-surface-variant mb-1">{detail.subtitle}</p>
-          <p className="text-label-mono text-primary">{detail.role}</p>
+          <div className="text-center mt-4">
+            <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">
+              {title}
+            </h1>
+            <p className="text-label-mono text-on-surface-variant mb-1">{detail.subtitle}</p>
+            <p className="text-label-mono text-primary">{detail.role}</p>
+          </div>
         </div>
       </section>
 
       {/* Detail Body */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto pb-24 md:pb-section-gap">
-        <div className="max-w-3xl">
-          <ProjectDetailView detail={detail} />
-        </div>
+        <ProjectDetailView detail={detail} />
       </section>
     </div>
   );

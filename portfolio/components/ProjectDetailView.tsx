@@ -27,7 +27,7 @@ function BulletList({ items }: { items: string[] }) {
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-3 text-body-md text-on-surface-variant">
           <span className="text-primary mt-0.5 shrink-0 select-none">—</span>
-          <span>{parseBold(item)}</span>
+          <span className="text-justify">{parseBold(item)}</span>
         </li>
       ))}
     </ul>
