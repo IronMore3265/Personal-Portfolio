@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
-import ProjectModal from "@/components/ProjectModal";
-import type { ProjectDetail } from "@/components/ProjectModal";
 import SectionHeading from "@/components/SectionHeading";
 import { PatternGrid } from "@/components/DecorativeElements";
 import { useRevealAnimations } from "@/lib/animations";
@@ -21,7 +19,7 @@ interface Project {
   variant: "light" | "dark" | "featured";
   colSpan?: number;
   rowSpan?: number;
-  detail?: ProjectDetail;
+  href?: string;
 }
 
 const projects: Project[] = [
@@ -63,30 +61,9 @@ const projects: Project[] = [
     description:
       "Motorized, self-unloading wheelbarrow designed to cut manual handling strain for construction and dump-cleaning workers. Led team coordination and validated mechanical durability via ANSYS, with a modeled 74% ROI.",
     category: "academic",
-    variant: "dark",
+    variant: "light",
     colSpan: 2,
-    detail: {
-      subtitle: "Undergraduate Product Design Project · Team of 6",
-      role: "Mechanical Analysis (ANSYS) · Project Coordination & Lead",
-      overview:
-        "A motorized, self-unloading wheelbarrow built to reduce physical strain and unloading time for dump cleaners, construction workers, and farmers — addressing the manual handling injuries and productivity losses common with traditional push wheelbarrows.",
-      keyFeatures: [
-        "Motorized wheels for effortless transport of heavy loads",
-        "Integrated braking system for operator safety",
-        "Automated unloading mechanism, eliminating manual tipping",
-      ],
-      contribution: [
-        "Led project coordination across design, financial modeling, and market-research workstreams, aligning a 6-member team around a single product roadmap and final deliverable.",
-        "Performed mechanical feasibility and fatigue-life analysis of the chassis and load-bearing components using **ANSYS**, validating structural durability under repeated **80–100kg** load cycles.",
-        "Prepared and presented the final poster and live product demonstration, consolidating engineering, financial, and market findings into one cohesive story.",
-      ],
-      outcomes: [
-        "Delivered a working prototype carrying and unloading **80–100kg** per cycle, with **12+ hours** of battery backup on a full charge.",
-        "Modeled commercial viability at **74% ROI**, a **10.72-year payback period**, and break-even at **401 units**.",
-        "Sized the addressable market at **$814.2M TAM**, with a serviceable obtainable market of **1,438 units**.",
-      ],
-      tools: ["ANSYS", "Mechanical Analysis", "Product Design", "Cross-functional Leadership"],
-    },
+    href: "/projects/motohaul",
   },
   {
     tag: "Industrial",
@@ -164,7 +141,6 @@ const softwareFilters: { label: string; value: SoftwareFilter }[] = [
 export default function ProjectsPage() {
   const [category, setCategory] = useState<ProjectCategory>("all");
   const [softwareFilter, setSoftwareFilter] = useState<SoftwareFilter>("all");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const revealRef = useRevealAnimations();
 
   const filteredProjects = projects.filter((p) => {
@@ -252,7 +228,7 @@ export default function ProjectsPage() {
               variant={project.variant}
               colSpan={project.colSpan}
               rowSpan={project.rowSpan}
-              onClick={project.detail ? () => setSelectedProject(project) : undefined}
+              href={project.href}
               className="reveal-scale"
             />
           ))}
@@ -269,13 +245,6 @@ export default function ProjectsPage() {
           </div>
         )}
       </section>
-      {selectedProject?.detail && (
-        <ProjectModal
-          title={selectedProject.title}
-          detail={selectedProject.detail}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
     </div>
   );
 }
