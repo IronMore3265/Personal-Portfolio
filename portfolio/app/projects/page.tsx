@@ -36,10 +36,12 @@ const projects: Project[] = [
   },
   {
     tag: "Competition",
-    title: "Mastermind 2.0",
-    description: "Secured 1st Runners-up position in national competition.",
+    title: "Mastermind 2.0 — National Business Case Competition",
+    description:
+      "Secured 1st Runner-Up out of 456 teams nationwide in Mastermind 2.0, a national business case competition, advancing through to the top 10 finalist round.",
     category: "academic",
     variant: "light",
+    href: "/projects/mastermind",
   },
   {
     tag: "Global Case",

@@ -2,12 +2,13 @@ import type { ReactNode } from "react";
 
 export interface ProjectDetail {
   subtitle: string;
-  role: string;
+  role?: string;
   overview: string;
   keyFeatures?: string[];
   methodology?: string[];
   contribution?: string[];
-  outcomes: string[];
+  highlights?: string[];
+  outcomes?: string[];
   tools: string[];
 }
 
@@ -81,11 +82,21 @@ export default function ProjectDetailView({ detail }: { detail: ProjectDetail })
           </section>
         )}
 
+        {/* Highlights */}
+        {detail.highlights && (
+          <section>
+            <h3 className="text-label-mono text-on-surface mb-3">Highlights</h3>
+            <BulletList items={detail.highlights} />
+          </section>
+        )}
+
         {/* Outcomes */}
-        <section>
-          <h3 className="text-label-mono text-on-surface mb-3">Outcomes</h3>
-          <BulletList items={detail.outcomes} />
-        </section>
+        {detail.outcomes && (
+          <section>
+            <h3 className="text-label-mono text-on-surface mb-3">Outcomes</h3>
+            <BulletList items={detail.outcomes} />
+          </section>
+        )}
       </div>
     </>
   );
