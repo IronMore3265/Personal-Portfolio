@@ -10,7 +10,6 @@ import { PatternGrid, DiagonalLine, GradientBlob } from "@/components/Decorative
 import {
   useHeroAnimation,
   useRevealAnimations,
-  useCountUp,
 } from "@/lib/animations";
 
 const skills = [
@@ -56,10 +55,6 @@ const experiences = [
 export default function Home() {
   const heroRef = useHeroAnimation();
   const revealRef = useRevealAnimations();
-
-  const statProjects = useCountUp(10, 2, "+");
-  const statCapacity = useCountUp(16, 2, "%");
-  const statEmission = useCountUp(93, 2, "%");
 
   return (
     <div ref={revealRef}>
@@ -180,45 +175,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== STATS ROW ===== */}
-      <section className="border-y border-outline-variant bg-surface-bright py-16 px-margin-mobile md:px-margin-desktop dark:bg-surface-container">
-        <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-          <div className="reveal-up">
-            <span
-              ref={statProjects}
-              className="text-display text-primary block mb-2"
-            >
-              0
-            </span>
-            <span className="text-label-mono text-on-surface-variant">
-              Projects Completed
-            </span>
-          </div>
-          <div className="reveal-up">
-            <span
-              ref={statCapacity}
-              className="text-display text-primary block mb-2"
-            >
-              0
-            </span>
-            <span className="text-label-mono text-on-surface-variant">
-              Capacity Increase
-            </span>
-          </div>
-          <div className="reveal-up">
-            <span
-              ref={statEmission}
-              className="text-display text-primary block mb-2"
-            >
-              0
-            </span>
-            <span className="text-label-mono text-on-surface-variant">
-              Emission Reduction
-            </span>
-          </div>
-        </div>
-      </section>
-
       {/* ===== PROJECTS PREVIEW ===== */}
       <section id="projects" className="py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <SectionHeading icon="view_cozy" title="My Projects" />
@@ -254,7 +210,7 @@ export default function Home() {
             className="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
           >
             <div className="flex justify-between items-start">
-              <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
+              <span className="bg-primary text-on-primary text-label-mono px-3 py-1 text-xs w-fit">
                 Product Design
               </span>
               <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
@@ -263,34 +219,37 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-display text-body-lg font-bold mb-2 text-on-surface">
-                MotoHaul
+                MotoHaul — Motorized Self-Unloading Wheelbarrow
               </h3>
               <p className="text-body-md text-on-surface-variant text-sm">
-                Motorized self-unloading wheelbarrow with a modeled 74% ROI.
+                Motorized, self-unloading wheelbarrow designed to cut manual
+                handling strain for construction and dump-cleaning workers. Led
+                team coordination and validated mechanical durability via ANSYS,
+                with a modeled 74% ROI.
               </p>
             </div>
           </Link>
 
           <Link
             href="/projects/reckitt-5s"
-            className="bg-primary text-on-primary p-8 flex flex-col justify-between group reveal-scale dark:bg-surface-container-highest dark:border dark:border-outline-variant"
+            className="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
           >
             <div className="flex justify-between items-start">
-              <span className="border border-on-primary text-label-mono px-3 py-1 text-xs dark:border-outline-variant">
+              <span className="bg-primary text-on-primary text-label-mono px-3 py-1 text-xs w-fit">
                 Industrial
               </span>
-              <span className="material-symbols-outlined text-on-primary/50 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform dark:text-on-surface-variant">
+              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
                 arrow_outward
               </span>
             </div>
             <div>
-              <h3 className="font-display text-body-lg font-bold mb-2">
-                Reckitt Benckiser 5S Implementation
+              <h3 className="font-display text-body-lg font-bold mb-2 text-on-surface">
+                5S Workplace Implementation at Reckitt Benckiser (Bangladesh) PLC
               </h3>
-              <p className="text-body-md text-primary-fixed-dim text-sm dark:text-on-surface-variant">
+              <p className="text-body-md text-on-surface-variant text-sm">
                 Led 5S implementation across the Dettol Packaging Area and
-                Harpic Marine Line, achieving a 16.25% storage capacity
-                increase.
+                Harpic Marine Line during an industrial attachment, achieving a
+                16.25% storage capacity increase.
               </p>
             </div>
           </Link>
