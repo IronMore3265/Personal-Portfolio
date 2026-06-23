@@ -35,15 +35,6 @@ const projects: Project[] = [
     href: "/projects/cnc-turning",
   },
   {
-    tag: "Competition",
-    title: "Mastermind 2.0 — National Business Case Competition",
-    description:
-      "Secured 1st Runner-Up out of 456 teams nationwide in Mastermind 2.0, a national business case competition, advancing through to the top 10 finalist round.",
-    category: "academic",
-    variant: "light",
-    href: "/projects/mastermind",
-  },
-  {
     tag: "Global Case",
     title: "ISCEA Global Supply Chain Case",
     description: "Awarded 60% Scholarship for exceptional performance.",

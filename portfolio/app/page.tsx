@@ -80,7 +80,7 @@ export default function Home() {
           </h1>
           <div className="hero-subtitle flex items-center gap-4 mb-8">
             <h2 className="text-headline-md text-on-surface-variant">
-              IPE Graduate, BUET
+              Industrial Engineer & Data Analyst
             </h2>
           </div>
           <p className="hero-description text-body-lg text-on-surface-variant mb-10 max-w-lg">
@@ -341,14 +341,14 @@ export default function Home() {
               </span>
               <div>
                 <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
-                  Finalist · Top 8 of 111
+                  Finalist
                 </span>
                 <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
                   EconoVision — National Policy-Making Competition
                 </h3>
                 <p className="text-body-md text-on-surface-variant text-sm">
                   Advanced to the finals of a national-level policy-making
-                  competition, placing among the top 8 teams out of 111
+                  competition, competing against a field of 111 teams
                   nationwide.
                 </p>
               </div>
