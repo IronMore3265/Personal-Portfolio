@@ -2,8 +2,15 @@ import Link from "next/link";
 import ProjectDetailView from "@/components/ProjectDetailView";
 import type { ProjectDetail } from "@/components/ProjectDetailView";
 import { PatternGrid } from "@/components/DecorativeElements";
+import ImageSlider from "@/components/ImageSlider";
 
 const title = "MotoHaul — Motorized Self-Unloading Wheelbarrow";
+
+const gallery = [
+  "https://drive.google.com/file/d/1_Az_bs79JdSHQIpF1er-MhXVprxwzZeN/preview",
+  "https://drive.google.com/file/d/1GckMoVosnPncUQ5z4oIkXLizfdbyUMSX/preview",
+  "https://drive.google.com/file/d/1dmVMnGl8w-4VLK3FNkC4cPiCSbPq1AP-/preview",
+];
 
 const detail: ProjectDetail = {
   subtitle: "Undergraduate Product Design Project · Team of 6",
@@ -42,6 +49,7 @@ export default function MotoHaulPage() {
             <span className="material-symbols-outlined mr-2 text-sm">arrow_back</span>
             Back to Projects
           </Link>
+          <ImageSlider slides={gallery} />
           <div className="text-center mt-4">
             <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">
               {title}
