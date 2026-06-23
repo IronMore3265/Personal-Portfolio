@@ -178,7 +178,7 @@ export default function Home() {
       {/* ===== PROJECTS PREVIEW ===== */}
       <section id="projects" className="py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <SectionHeading icon="view_cozy" title="My Projects" />
-        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[280px] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-auto md:auto-rows-[280px] gap-6">
           {/* Featured Project */}
           <Link
             href="/projects/cnc-turning"

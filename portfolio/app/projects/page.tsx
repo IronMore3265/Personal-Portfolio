@@ -148,7 +148,7 @@ export default function ProjectsPage() {
 
       {/* Projects Grid */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto pb-24 md:pb-section-gap">
-        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[280px] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-auto md:auto-rows-[280px] gap-6">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.title}

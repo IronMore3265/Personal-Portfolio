@@ -31,7 +31,7 @@ const variantStyles: Record<CardVariant, { card: string; tag: string; arrow: str
   },
   featured: {
     card: "bg-surface-container border border-outline-variant hover:border-primary dark:bg-surface-container-high",
-    tag: "bg-primary text-on-primary dark:bg-surface-container-highest dark:text-on-surface",
+    tag: "bg-primary text-on-primary",
     arrow: "text-outline-variant group-hover:text-primary",
     title: "text-on-surface",
     desc: "text-on-surface-variant",

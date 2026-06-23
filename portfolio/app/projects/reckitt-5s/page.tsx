@@ -1,4 +1,4 @@
-import Link from "next/link";
+import BackButton from "@/components/BackButton";
 import ProjectDetailView from "@/components/ProjectDetailView";
 import type { ProjectDetail } from "@/components/ProjectDetailView";
 import { PatternGrid } from "@/components/DecorativeElements";
@@ -31,13 +31,7 @@ export default function Reckitt5SPage() {
       <section className="relative pt-16 md:pt-24 pb-8 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <PatternGrid className="absolute top-10 right-10 w-40 h-40 opacity-30 hidden md:block" />
         <div className="relative z-10">
-          <Link
-            href="/projects"
-            className="inline-flex items-center text-label-mono text-on-surface-variant hover:text-primary transition-colors mb-8"
-          >
-            <span className="material-symbols-outlined mr-2 text-sm">arrow_back</span>
-            Back to Projects
-          </Link>
+          <BackButton label="Back to Projects" fallbackHref="/projects" />
           <ImageSlider slides={gallery} fit="contain" />
           <div className="text-center mt-4">
             <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">
