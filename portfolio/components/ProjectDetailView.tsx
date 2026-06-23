@@ -4,8 +4,9 @@ export interface ProjectDetail {
   subtitle: string;
   role: string;
   overview: string;
-  keyFeatures: string[];
-  contribution: string[];
+  keyFeatures?: string[];
+  methodology?: string[];
+  contribution?: string[];
   outcomes: string[];
   tools: string[];
 }
@@ -57,16 +58,28 @@ export default function ProjectDetailView({ detail }: { detail: ProjectDetail })
         </section>
 
         {/* Key Features */}
-        <section>
-          <h3 className="text-label-mono text-on-surface mb-3">Key Features</h3>
-          <BulletList items={detail.keyFeatures} />
-        </section>
+        {detail.keyFeatures && (
+          <section>
+            <h3 className="text-label-mono text-on-surface mb-3">Key Features</h3>
+            <BulletList items={detail.keyFeatures} />
+          </section>
+        )}
+
+        {/* Methodology */}
+        {detail.methodology && (
+          <section>
+            <h3 className="text-label-mono text-on-surface mb-3">Methodology</h3>
+            <BulletList items={detail.methodology} />
+          </section>
+        )}
 
         {/* My Contribution */}
-        <section>
-          <h3 className="text-label-mono text-on-surface mb-3">My Contribution</h3>
-          <BulletList items={detail.contribution} />
-        </section>
+        {detail.contribution && (
+          <section>
+            <h3 className="text-label-mono text-on-surface mb-3">My Contribution</h3>
+            <BulletList items={detail.contribution} />
+          </section>
+        )}
 
         {/* Outcomes */}
         <section>

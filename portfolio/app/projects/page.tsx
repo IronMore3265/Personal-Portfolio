@@ -25,13 +25,14 @@ interface Project {
 const projects: Project[] = [
   {
     tag: "Research",
-    title: "Thesis Project: CNC Turning Optimization",
+    title: "Carbon Emission Optimization in CNC Turning",
     description:
-      "Comprehensive study on sustainable manufacturing processes, achieving a 93% reduction in carbon emissions through optimized cutting parameters.",
+      "Optimized CNC turning parameters using Grey Relational Analysis and TOPSIS, cutting carbon emissions by 93% and validated with regression models up to R² 99.97%.",
     category: "academic",
     variant: "featured",
     colSpan: 2,
     rowSpan: 2,
+    href: "/projects/cnc-turning",
   },
   {
     tag: "Competition",
