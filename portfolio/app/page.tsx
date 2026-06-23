@@ -127,7 +127,7 @@ export default function Home() {
               Education
             </h2>
             <div className="mb-8">
-              <h3 className="font-display text-body-lg font-bold text-on-surface">
+              <h3 className="font-display text-lg font-bold text-on-surface">
                 BSc in Industrial and Production Engineering
               </h3>
               <p className="text-body-md text-on-surface-variant">
@@ -218,7 +218,7 @@ export default function Home() {
               </span>
             </div>
             <div>
-              <h3 className="font-display text-body-lg font-bold mb-2 text-on-surface">
+              <h3 className="font-display text-lg font-bold mb-2 text-on-surface">
                 MotoHaul — Motorized Self-Unloading Wheelbarrow
               </h3>
               <p className="text-body-md text-on-surface-variant text-sm">
@@ -243,7 +243,7 @@ export default function Home() {
               </span>
             </div>
             <div>
-              <h3 className="font-display text-body-lg font-bold mb-2 text-on-surface">
+              <h3 className="font-display text-lg font-bold mb-2 text-on-surface">
                 5S Workplace Implementation at Reckitt Benckiser (Bangladesh) PLC
               </h3>
               <p className="text-body-md text-on-surface-variant text-sm">
@@ -281,7 +281,7 @@ export default function Home() {
                 <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
                   1st Runner-Up
                 </span>
-                <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                <h3 className="font-display text-lg font-bold mt-3 mb-2 text-on-surface">
                   Mastermind 2.0 — National Business Case Competition
                 </h3>
                 <p className="text-body-md text-on-surface-variant text-sm">
@@ -306,7 +306,7 @@ export default function Home() {
                 <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
                   Cofounder · Pre-Seed Funded
                 </span>
-                <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                <h3 className="font-display text-lg font-bold mt-3 mb-2 text-on-surface">
                   ProdLuxe — Herbal Detox Powder Startup
                 </h3>
                 <p className="text-body-md text-on-surface-variant text-sm">
@@ -332,7 +332,7 @@ export default function Home() {
                 <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
                   Finalist · Top 8
                 </span>
-                <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                <h3 className="font-display text-lg font-bold mt-3 mb-2 text-on-surface">
                   EconoVision — National Policy-Making Competition
                 </h3>
                 <p className="text-body-md text-on-surface-variant text-sm">
@@ -358,7 +358,7 @@ export default function Home() {
                   <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
                     Finalist · Top 10
                   </span>
-                  <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                  <h3 className="font-display text-lg font-bold mt-3 mb-2 text-on-surface">
                     SecureMed — Future Bangladesh Challenge 2025
                   </h3>
                   <p className="text-body-md text-on-surface-variant text-sm">
@@ -385,7 +385,7 @@ export default function Home() {
                   <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
                     Finalist · Top 17
                   </span>
-                  <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                  <h3 className="font-display text-lg font-bold mt-3 mb-2 text-on-surface">
                     SecureMed — VisionX 2025
                   </h3>
                   <p className="text-body-md text-on-surface-variant text-sm">
