@@ -16,7 +16,7 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
   return (
     <div className="relative w-full max-w-3xl mx-auto mb-10">
       {/* Viewport */}
-      <div className="relative overflow-hidden border border-outline-variant bg-surface-container aspect-[16/10]">
+      <div className="relative overflow-hidden border border-outline-variant bg-surface-container aspect-[5/4]">
         <div
           className="flex h-full transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${index * 100}%)` }}
