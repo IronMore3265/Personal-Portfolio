@@ -2,17 +2,25 @@ import Link from "next/link";
 import ProjectDetailView from "@/components/ProjectDetailView";
 import type { ProjectDetail } from "@/components/ProjectDetailView";
 import { PatternGrid } from "@/components/DecorativeElements";
+import ImageSlider from "@/components/ImageSlider";
 
 const title = "Carbon Emission Optimization in CNC Turning";
 
+const gallery = [
+  "/images/IMG_0580.jpg",
+  "/images/Stage5_Fig1_PieCharts_Energy_CE.png",
+  "/images/Stage5_Fig4_StackedBar_CE_perExperiment.png",
+  "/images/Stage8_Fig3_Residual_Diagnostics.png",
+];
+
 const detail: ProjectDetail = {
   subtitle: "Undergraduate Thesis · Industrial & Production Engineering",
-  role: "Independent Research",
+  role: "Collaborative Research · Team of 3 People",
   overview:
     "A sustainability-focused thesis investigating how cutting parameters in CNC turning — speed, feed, and depth of cut — affect energy consumption and carbon emissions, with the goal of identifying machining conditions that cut environmental impact without sacrificing performance.",
   methodology: [
     "Conducted 30 full-factorial CNC turning experiments under dry and wet cutting conditions on a **Haas CNC lathe**, measuring energy consumption and emissions across varying parameter combinations.",
-    "Applied **Grey Relational Analysis (GRA)** and **TOPSIS** multi-objective optimization, cross-validated, to identify the optimal speed-feed-depth combination.",
+    "Processed experimental data and performed **Grey Relational Analysis (GRA)** and **TOPSIS** multi-objective optimization calculations in **Excel** and **MATLAB**, cross-validated, to identify the optimal speed-feed-depth combination.",
     "Built and validated power-law regression models in **Minitab** to predict energy consumption and emissions directly from cutting parameters.",
   ],
   outcomes: [
@@ -37,6 +45,7 @@ export default function CncTurningPage() {
             <span className="material-symbols-outlined mr-2 text-sm">arrow_back</span>
             Back to Projects
           </Link>
+          <ImageSlider slides={gallery} fit="contain" />
           <div className="text-center mt-4">
             <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">
               {title}

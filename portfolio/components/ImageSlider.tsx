@@ -4,9 +4,10 @@ import { useState } from "react";
 
 interface ImageSliderProps {
   slides: string[];
+  fit?: "cover" | "contain";
 }
 
-export default function ImageSlider({ slides }: ImageSliderProps) {
+export default function ImageSlider({ slides, fit = "cover" }: ImageSliderProps) {
   const [index, setIndex] = useState(0);
 
   const goTo = (i: number) => setIndex((i + slides.length) % slides.length);
@@ -35,7 +36,7 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
                   src={src}
                   alt={`Slide ${i + 1}`}
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
                 />
               )}
             </div>
