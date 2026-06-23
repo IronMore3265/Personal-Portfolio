@@ -25,6 +25,7 @@ export default function Navbar() {
     { label: "About Me", href: "/#about" },
     { label: "Experience", href: "/#experience" },
     { label: "My Projects", href: "/#projects" },
+    { label: "Achievements", href: "/#achievements" },
   ];
 
   return (

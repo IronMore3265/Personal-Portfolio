@@ -250,12 +250,12 @@ export default function Home() {
 
           {/* Small Cards */}
           <Link
-            href="/projects/mastermind"
+            href="/projects/motohaul"
             className="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
           >
             <div className="flex justify-between items-start">
               <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
-                Competition
+                Product Design
               </span>
               <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
                 arrow_outward
@@ -263,11 +263,10 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-display text-body-lg font-bold mb-2 text-on-surface">
-                Mastermind 2.0
+                MotoHaul
               </h3>
               <p className="text-body-md text-on-surface-variant text-sm">
-                1st Runner-Up out of 456 teams in a national business case
-                competition.
+                Motorized self-unloading wheelbarrow with a modeled 74% ROI.
               </p>
             </div>
           </Link>
@@ -297,6 +296,41 @@ export default function Home() {
           <Button href="/projects" variant="secondary" icon="arrow_forward">
             View All Projects
           </Button>
+        </div>
+      </section>
+
+      {/* ===== ACHIEVEMENTS SECTION ===== */}
+      <section
+        id="achievements"
+        className="pb-24 md:pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto"
+      >
+        <SectionHeading icon="emoji_events" title="Achievements" />
+        <div className="grid grid-cols-1 gap-6">
+          <Link
+            href="/projects/mastermind"
+            className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
+          >
+            <div className="flex items-start gap-5">
+              <span className="material-symbols-outlined text-4xl text-primary shrink-0">
+                emoji_events
+              </span>
+              <div>
+                <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
+                  1st Runner-Up
+                </span>
+                <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
+                  Mastermind 2.0 — National Business Case Competition
+                </h3>
+                <p className="text-body-md text-on-surface-variant text-sm">
+                  1st Runner-Up out of 456 teams nationwide, advancing through
+                  to the top 10 finalist round.
+                </p>
+              </div>
+            </div>
+            <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
+              arrow_outward
+            </span>
+          </Link>
         </div>
       </section>
 
