@@ -11,7 +11,7 @@ if (typeof window !== "undefined") {
 /**
  * Hook: Animate elements with class 'reveal-up' on scroll
  */
-export function useRevealAnimations() {
+export function useRevealAnimations(deps: unknown[] = []) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -79,7 +79,8 @@ export function useRevealAnimations() {
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
 
   return containerRef;
 }

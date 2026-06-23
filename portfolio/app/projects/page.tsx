@@ -35,27 +35,12 @@ const projects: Project[] = [
     href: "/projects/cnc-turning",
   },
   {
-    tag: "Global Case",
-    title: "ISCEA Global Supply Chain Case",
-    description: "Awarded 60% Scholarship for exceptional performance.",
-    category: "academic",
-    variant: "light",
-    colSpan: 2,
-  },
-  {
-    tag: "Innovation",
-    title: "University Innovation Hub",
-    description: "Secured pre-seed grant for innovative engineering solution.",
-    category: "academic",
-    variant: "light",
-  },
-  {
     tag: "Product Design",
     title: "MotoHaul — Motorized Self-Unloading Wheelbarrow",
     description:
       "Motorized, self-unloading wheelbarrow designed to cut manual handling strain for construction and dump-cleaning workers. Led team coordination and validated mechanical durability via ANSYS, with a modeled 74% ROI.",
     category: "academic",
-    variant: "light",
+    variant: "featured",
     colSpan: 2,
     href: "/projects/motohaul",
   },
@@ -65,57 +50,8 @@ const projects: Project[] = [
     description:
       "Led 5S implementation across the Dettol Packaging Area and Harpic Marine Line during an industrial attachment, achieving a 16.25% storage capacity increase.",
     category: "academic",
-    variant: "dark",
-    href: "/projects/reckitt-5s",
-  },
-  {
-    tag: "Data Analysis",
-    title: "Sales Performance Dashboard",
-    description:
-      "Built comprehensive Power BI dashboard for real-time sales tracking and KPI monitoring.",
-    category: "software",
-    softwareType: "powerbi",
-    variant: "light",
-    colSpan: 2,
-  },
-  {
-    tag: "Automation",
-    title: "Production Line Optimizer",
-    description:
-      "Python-based simulation and optimization tool for manufacturing line balancing.",
-    category: "software",
-    softwareType: "python",
     variant: "featured",
-    colSpan: 2,
-    rowSpan: 2,
-  },
-  {
-    tag: "Analysis",
-    title: "Supply Chain Cost Model",
-    description:
-      "Advanced Excel model for multi-echelon supply chain cost analysis with scenario planning.",
-    category: "software",
-    softwareType: "excel",
-    variant: "light",
-  },
-  {
-    tag: "Visualization",
-    title: "Quality Control Analytics",
-    description:
-      "Power BI solution for statistical process control and defect root cause analysis.",
-    category: "software",
-    softwareType: "powerbi",
-    variant: "dark",
-  },
-  {
-    tag: "Machine Learning",
-    title: "Demand Forecasting Engine",
-    description:
-      "Python ML pipeline for demand prediction using ARIMA and XGBoost models.",
-    category: "software",
-    softwareType: "python",
-    variant: "light",
-    colSpan: 2,
+    href: "/projects/reckitt-5s",
   },
 ];
 
@@ -135,7 +71,7 @@ const softwareFilters: { label: string; value: SoftwareFilter }[] = [
 export default function ProjectsPage() {
   const [category, setCategory] = useState<ProjectCategory>("all");
   const [softwareFilter, setSoftwareFilter] = useState<SoftwareFilter>("all");
-  const revealRef = useRevealAnimations();
+  const revealRef = useRevealAnimations([category, softwareFilter]);
 
   const filteredProjects = projects.filter((p) => {
     if (category === "all") return true;
@@ -213,9 +149,9 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto pb-24 md:pb-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[280px] gap-6">
-          {filteredProjects.map((project, i) => (
+          {filteredProjects.map((project) => (
             <ProjectCard
-              key={`${project.title}-${i}`}
+              key={project.title}
               tag={project.tag}
               title={project.title}
               description={project.description}
