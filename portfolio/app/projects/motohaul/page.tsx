@@ -7,9 +7,9 @@ import ImageSlider from "@/components/ImageSlider";
 const title = "MotoHaul — Motorized Self-Unloading Wheelbarrow";
 
 const gallery = [
-  "https://drive.google.com/file/d/1yffODz0dYUnrMsj2VOo693_QrxYJiguh/preview",
-  "https://drive.google.com/file/d/1FUMMmhRODH8BpxWDPknf3jjO8a8gPyEH/preview",
-  "https://drive.google.com/file/d/1dmVMnGl8w-4VLK3FNkC4cPiCSbPq1AP-/preview",
+  "/images/group_wheelbarrow.jpg",
+  "/images/wheelbarrow.jpg",
+  "/images/MotoHaul_Video%20Demonstration.mp4",
 ];
 
 const detail: ProjectDetail = {

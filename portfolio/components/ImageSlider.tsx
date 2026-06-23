@@ -16,21 +16,28 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
   return (
     <div className="relative w-full max-w-3xl mx-auto mb-10">
       {/* Viewport */}
-      <div className="relative overflow-hidden border border-outline-variant bg-surface-container aspect-[5/4]">
+      <div className="relative overflow-hidden border border-outline-variant bg-surface-container aspect-video">
         <div
           className="flex h-full transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {slides.map((src, i) => (
             <div key={i} className="relative w-full h-full shrink-0">
-              <iframe
-                src={src}
-                title={`Slide ${i + 1}`}
-                className="w-full h-full"
-                loading="lazy"
-                allow="autoplay"
-                allowFullScreen
-              />
+              {/\.(mp4|webm|ogg)$/i.test(src) ? (
+                <video
+                  src={src}
+                  controls
+                  preload="metadata"
+                  className="w-full h-full object-contain bg-black"
+                />
+              ) : (
+                <img
+                  src={src}
+                  alt={`Slide ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              )}
             </div>
           ))}
         </div>
@@ -39,14 +46,14 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
       {/* Arrows */}
       <button
         onClick={prev}
-        aria-label="Previous image"
+        aria-label="Previous slide"
         className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-background/80 border border-outline-variant text-on-surface hover:text-primary hover:border-primary transition-colors"
       >
         <span className="material-symbols-outlined">chevron_left</span>
       </button>
       <button
         onClick={next}
-        aria-label="Next image"
+        aria-label="Next slide"
         className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-background/80 border border-outline-variant text-on-surface hover:text-primary hover:border-primary transition-colors"
       >
         <span className="material-symbols-outlined">chevron_right</span>
@@ -58,7 +65,7 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
           <button
             key={i}
             onClick={() => goTo(i)}
-            aria-label={`Go to image ${i + 1}`}
+            aria-label={`Go to slide ${i + 1}`}
             className={`h-2 transition-all duration-300 ${
               i === index
                 ? "w-6 bg-primary"
