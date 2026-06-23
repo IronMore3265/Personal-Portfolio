@@ -224,7 +224,10 @@ export default function Home() {
         <SectionHeading icon="view_cozy" title="My Projects" />
         <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[280px] gap-6">
           {/* Featured Project */}
-          <div className="md:col-span-2 md:row-span-2 bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high">
+          <Link
+            href="/projects/cnc-turning"
+            className="md:col-span-2 md:row-span-2 bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
+          >
             <div className="flex justify-between items-start">
               <span className="bg-primary text-on-primary text-label-mono px-3 py-1 text-xs">
                 Research
@@ -235,29 +238,39 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-headline-md mb-4 text-on-surface">
-                Thesis Project: CNC Turning Optimization
+                Carbon Emission Optimization in CNC Turning
               </h3>
               <p className="text-body-md text-on-surface-variant max-w-lg">
-                Comprehensive study on sustainable manufacturing processes,
-                achieving a 93% reduction in carbon emissions.
+                Optimized CNC turning parameters using Grey Relational
+                Analysis and TOPSIS, cutting carbon emissions by 93% and
+                validated with regression models up to R² 99.97%.
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Small Cards */}
-          <div className="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high">
-            <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
-              Competition
-            </span>
+          <Link
+            href="/projects/mastermind"
+            className="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
+          >
+            <div className="flex justify-between items-start">
+              <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
+                Competition
+              </span>
+              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
+                arrow_outward
+              </span>
+            </div>
             <div>
               <h3 className="font-display text-body-lg font-bold mb-2 text-on-surface">
                 Mastermind 2.0
               </h3>
               <p className="text-body-md text-on-surface-variant text-sm">
-                Secured 1st Runners-up position in national competition.
+                1st Runner-Up out of 456 teams in a national business case
+                competition.
               </p>
             </div>
-          </div>
+          </Link>
 
           <div className="bg-primary text-on-primary p-8 flex flex-col justify-between group reveal-scale dark:bg-surface-container-highest dark:border dark:border-outline-variant">
             <div className="flex justify-between items-start">
@@ -270,11 +283,11 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-display text-body-lg font-bold mb-2">
-                Reckitt Benckiser 5S/Lean
+                Reckitt Benckiser 5S/Lean Project
               </h3>
               <p className="text-body-md text-primary-fixed-dim text-sm dark:text-on-surface-variant">
-                Led implementation on Dettol line resulting in significant
-                capacity boost.
+                Led 5S implementation on Dettol production line resulting in
+                +16.25% capacity increase.
               </p>
             </div>
           </div>
