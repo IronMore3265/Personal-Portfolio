@@ -193,8 +193,10 @@ body {
   overflow-x: hidden;
 }
 
-p {
-  text-align: justify;
+@layer base {
+  p {
+    text-align: justify;
+  }
 }
 
 ::selection {
