@@ -271,7 +271,10 @@ export default function Home() {
             </div>
           </Link>
 
-          <div className="bg-primary text-on-primary p-8 flex flex-col justify-between group reveal-scale dark:bg-surface-container-highest dark:border dark:border-outline-variant">
+          <Link
+            href="/projects/reckitt-5s"
+            className="bg-primary text-on-primary p-8 flex flex-col justify-between group reveal-scale dark:bg-surface-container-highest dark:border dark:border-outline-variant"
+          >
             <div className="flex justify-between items-start">
               <span className="border border-on-primary text-label-mono px-3 py-1 text-xs dark:border-outline-variant">
                 Industrial
@@ -282,14 +285,15 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-display text-body-lg font-bold mb-2">
-                Reckitt Benckiser 5S/Lean Project
+                Reckitt Benckiser 5S Implementation
               </h3>
               <p className="text-body-md text-primary-fixed-dim text-sm dark:text-on-surface-variant">
-                Led 5S implementation on Dettol production line resulting in
-                +16.25% capacity increase.
+                Led 5S implementation across the Dettol Packaging Area and
+                Harpic Marine Line, achieving a 16.25% storage capacity
+                increase.
               </p>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="text-center mt-12 reveal-up">

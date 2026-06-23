@@ -61,12 +61,12 @@ const projects: Project[] = [
   },
   {
     tag: "Industrial",
-    title: "Reckitt Benckiser 5S/Lean Project",
+    title: "5S Workplace Implementation at Reckitt Benckiser (Bangladesh) PLC",
     description:
-      "Led 5S implementation on Dettol production line resulting in +16.25% capacity increase.",
-    category: "software",
-    softwareType: "excel",
+      "Led 5S implementation across the Dettol Packaging Area and Harpic Marine Line during an industrial attachment, achieving a 16.25% storage capacity increase.",
+    category: "academic",
     variant: "dark",
+    href: "/projects/reckitt-5s",
   },
   {
     tag: "Data Analysis",
