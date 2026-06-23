@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter, Geist } from "next/font/google";
+import { Montserrat, Geist } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -9,13 +9,6 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800"],
-});
-
-const inter = Inter({
-  variable: "--font-body",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "700"],
 });
 
 const geist = Geist({
@@ -57,7 +50,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${inter.variable} ${geist.variable} scroll-smooth`}
+      className={`${montserrat.variable} ${geist.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <head>
