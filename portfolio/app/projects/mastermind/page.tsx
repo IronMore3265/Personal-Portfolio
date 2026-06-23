@@ -2,11 +2,14 @@ import Link from "next/link";
 import ProjectDetailView from "@/components/ProjectDetailView";
 import type { ProjectDetail } from "@/components/ProjectDetailView";
 import { PatternGrid } from "@/components/DecorativeElements";
+import ImageSlider from "@/components/ImageSlider";
 
 const title = "Mastermind 2.0 — National Business Case Competition";
 
+const gallery = ["/images/mastermind_cert.png"];
+
 const detail: ProjectDetail = {
-  subtitle: '1st Runner-Up · Team of 4 ("DULLHEAD")',
+  subtitle: "1st Runner-Up · Team of 4",
   overview:
     "Competed in Mastermind 2.0, a national business case competition, advancing through multiple elimination rounds against a field of 456 teams to reach the final stage.",
   highlights: [
@@ -24,12 +27,13 @@ export default function MastermindPage() {
         <PatternGrid className="absolute top-10 right-10 w-40 h-40 opacity-30 hidden md:block" />
         <div className="relative z-10">
           <Link
-            href="/projects"
+            href="/"
             className="inline-flex items-center text-label-mono text-on-surface-variant hover:text-primary transition-colors mb-8"
           >
             <span className="material-symbols-outlined mr-2 text-sm">arrow_back</span>
-            Back to Projects
+            Back to Home
           </Link>
+          <ImageSlider slides={gallery} fit="contain" />
           <div className="text-center mt-4">
             <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">
               {title}
