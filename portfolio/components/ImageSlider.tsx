@@ -45,20 +45,24 @@ export default function ImageSlider({ slides, fit = "cover" }: ImageSliderProps)
       </div>
 
       {/* Arrows */}
-      <button
-        onClick={prev}
-        aria-label="Previous slide"
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-background/80 border border-outline-variant text-on-surface hover:text-primary hover:border-primary transition-colors"
-      >
-        <span className="material-symbols-outlined">chevron_left</span>
-      </button>
-      <button
-        onClick={next}
-        aria-label="Next slide"
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-background/80 border border-outline-variant text-on-surface hover:text-primary hover:border-primary transition-colors"
-      >
-        <span className="material-symbols-outlined">chevron_right</span>
-      </button>
+      {slides.length > 1 && (
+        <>
+          <button
+            onClick={prev}
+            aria-label="Previous slide"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-background/80 border border-outline-variant text-on-surface hover:text-primary hover:border-primary transition-colors"
+          >
+            <span className="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            onClick={next}
+            aria-label="Next slide"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-background/80 border border-outline-variant text-on-surface hover:text-primary hover:border-primary transition-colors"
+          >
+            <span className="material-symbols-outlined">chevron_right</span>
+          </button>
+        </>
+      )}
 
       {/* Dots */}
       <div className="flex justify-center gap-2 mt-4">
