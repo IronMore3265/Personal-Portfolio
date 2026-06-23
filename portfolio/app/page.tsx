@@ -36,10 +36,10 @@ const experiences = [
     title: "General Secretary",
     company: "Association of Industrial and Production Engineers (AIPE), BUET",
     bullets: [
-      "Serve as the highest elected student representative of the IPE department, leading a 100+ member organization across academic and professional initiatives.",
-      "Spearhead IPE Fest and Career Fest — coordinating logistics, corporate outreach, speaker sessions, and cross-departmental collaboration.",
-      "Launched and manage the Alumni Spotlight initiative to strengthen ties between current students and IPE alumni across industry and academia.",
-      "Oversee executive committee operations, faculty liaison, budget planning, and official departmental communications.",
+      "Served as the highest elected student representative of the IPE department, leading a 100+ member organization across academic and professional initiatives.",
+      "Spearheaded IPE Fest and Career Fest — coordinating logistics, corporate outreach, speaker sessions, and cross-departmental collaboration.",
+      "Launched and managed the Alumni Spotlight initiative to strengthen ties between current students and IPE alumni across industry and academia.",
+      "Oversaw executive committee operations, faculty liaison, budget planning, and official departmental communications.",
     ],
   },
   {
@@ -47,8 +47,8 @@ const experiences = [
     title: "Assistant General Secretary",
     company: "IEOM BUET Student Chapter",
     bullets: [
-      "Co-organize chapter events, workshops, and industrial seminars aligned with IEOM's professional development mission.",
-      "Coordinate member engagement, inter-chapter outreach, and documentation for one of BUET's active engineering professional societies.",
+      "Co-organized chapter events, workshops, and industrial seminars aligned with IEOM's professional development mission.",
+      "Coordinated member engagement, inter-chapter outreach, and documentation for one of BUET's active engineering professional societies.",
     ],
   },
 ];
@@ -157,7 +157,7 @@ export default function Home() {
             </h2>
             <div className="bg-surface-container p-8 border border-outline-variant dark:bg-surface-container-high">
               <p className="text-body-md text-on-surface-variant leading-relaxed">
-                I&apos;m an Industrial and Production Engineer who&apos;s spent the last few years learning how to make systems work smarter, not just harder — manufacturing lines, supply chains, decision-making processes. My academic work focused on optimizing CNC machining parameters to cut carbon emissions, but the thread running through everything I do is using data to solve problems that actually matter, where Lean tools like 5S, VSM, and SMED meet analytics platforms like Power BI and Python. I&apos;ve led a large student engineering organization, helped my team reach the podium at a national business case competition, and secured a pre-seed grant for a product design project — experiences that taught me as much about people and execution as any classroom did. Right now, I&apos;m channeling that mix of analytical rigor and process thinking into business analytics and supply chain roles, looking for problems worth solving at scale.
+                I&apos;m an Industrial and Production Engineer who&apos;s spent the last few years learning how to make systems work smarter, not just harder — manufacturing lines, supply chains, decision-making processes. My academic research focused on optimizing CNC machining parameters to cut carbon emissions, but the thread running through everything I do is using data to solve problems that actually matter, where Lean tools like 5S, VSM, and SMED meet analytics platforms like Power BI and Python. I&apos;ve led a large student engineering organization, helped my team reach the podium at a national business case competition, and secured a pre-seed grant for a product design project — experiences that taught me as much about people and execution as any classroom did. Right now, I&apos;m channeling that mix of analytical rigor and process thinking into business analytics and supply chain roles, looking for problems worth solving at scale.
               </p>
             </div>
           </div>
@@ -298,7 +298,7 @@ export default function Home() {
           </span>
           <h2 className="text-display font-bold text-primary mb-8 tracking-tight reveal-up">
             Say Hi, <br />
-            and let&apos;s talk data.
+            and let&apos;s connect.
           </h2>
           <p className="text-body-lg text-on-surface-variant mb-12 reveal-up">
             Have a process to optimize or data to analyze? Reach out and
