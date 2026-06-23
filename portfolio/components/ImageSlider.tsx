@@ -31,6 +31,12 @@ export default function ImageSlider({ slides, fit = "cover" }: ImageSliderProps)
                   preload="metadata"
                   className="w-full h-full object-contain bg-black"
                 />
+              ) : /\.pdf$/i.test(src) ? (
+                <iframe
+                  src={src}
+                  title={`Slide ${i + 1}`}
+                  className="w-full h-full bg-white"
+                />
               ) : (
                 <img
                   src={src}
