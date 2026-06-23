@@ -7,13 +7,14 @@ import ImageSlider from "@/components/ImageSlider";
 const title = "MotoHaul — Motorized Self-Unloading Wheelbarrow";
 
 const gallery = [
-  "/images/group_wheelbarrow.jpg",
   "/images/wheelbarrow.jpg",
+  "/images/wheelbarrow%20poster.jpg",
+  "/images/group_wheelbarrow.jpg",
   "/images/MotoHaul_Video%20Demonstration.mp4",
 ];
 
 const detail: ProjectDetail = {
-  subtitle: "Undergraduate Product Design Project · Team of 6",
+  subtitle: "Undergraduate Product Design Project · Team of 6 People",
   role: "Mechanical Analysis (ANSYS) · Project Coordination & Lead",
   overview:
     "A motorized, self-unloading wheelbarrow built to reduce physical strain and unloading time for dump cleaners, construction workers, and farmers — addressing the manual handling injuries and productivity losses common with traditional push wheelbarrows.",
