@@ -341,15 +341,14 @@ export default function Home() {
               </span>
               <div>
                 <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
-                  Finalist
+                  Finalist · Top 8
                 </span>
                 <h3 className="font-display text-body-lg font-bold mt-3 mb-2 text-on-surface">
                   EconoVision — National Policy-Making Competition
                 </h3>
                 <p className="text-body-md text-on-surface-variant text-sm">
                   Advanced to the finals of a national-level policy-making
-                  competition, competing against a field of 111 teams
-                  nationwide.
+                  competition, placing among the top 8 teams nationwide.
                 </p>
               </div>
             </div>

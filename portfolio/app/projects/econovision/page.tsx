@@ -9,11 +9,11 @@ const title = "EconoVision — National Policy-Making Competition";
 const gallery = ["/images/natecon_cert.jpg"];
 
 const detail: ProjectDetail = {
-  subtitle: "Finalist · Team of 2",
+  subtitle: "Finalist (Top 8) · Team of 2",
   overview:
     "Competed in EconoVision, the policy-making segment of NatEcon 2.0, a national-level case competition, advancing through multiple rounds of policy research and analytical writing to reach the finals.",
   highlights: [
-    "Advanced from a field of **111 teams** to reach the finals.",
+    "Advanced from a field of **111 teams** to the finals, placing among the **top 8** nationally.",
     "Strengthened policy research and analytical writing skills by developing comprehensive policy frameworks, as part of a 2-member team.",
   ],
   tools: ["Policy Research", "Analytical Writing", "Case Competition"],
