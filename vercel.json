@@ -1,5 +1,6 @@
 {
   "framework": null,
   "buildCommand": "cd portfolio && npm ci && npm run build",
-  "outputDirectory": "portfolio/out"
+  "outputDirectory": "portfolio/out",
+  "cleanUrls": true
 }
