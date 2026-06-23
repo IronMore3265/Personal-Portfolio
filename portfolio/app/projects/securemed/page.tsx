@@ -9,7 +9,7 @@ const title = "SecureMed — Future Bangladesh Challenge 2025";
 const gallery = ["/images/tbd_cert.png"];
 
 const detail: ProjectDetail = {
-  subtitle: "Top 10 of 700+ Teams · National Policy Challenge · Team of 2",
+  subtitle: "Finalist · Top 10 of 700+ Teams · National Policy Challenge · Team of 2",
   role: "Idea Generation & Financial Modeling",
   overview:
     "Proposed SecureMed, an integrated AI, blockchain, and IoT-based drug authentication system designed to combat counterfeit medicines and strengthen national healthcare integrity, as a policy solution in a national-level challenge.",
