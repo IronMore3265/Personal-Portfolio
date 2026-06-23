@@ -28,11 +28,9 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
                 title={`Slide ${i + 1}`}
                 className="w-full h-full"
                 loading="lazy"
+                allow="autoplay"
                 allowFullScreen
               />
-              {/* Transparent overlay: blocks interaction with the embed
-                  (e.g. download / pop-out controls) so it stays view-only */}
-              <div className="absolute inset-0 z-10" aria-hidden="true" />
             </div>
           ))}
         </div>
