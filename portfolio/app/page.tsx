@@ -265,7 +265,7 @@ export default function Home() {
       {/* ===== ACHIEVEMENTS SECTION ===== */}
       <section
         id="achievements"
-        className="pb-24 md:pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto"
+        className="scroll-mt-24 md:scroll-mt-32 pb-24 md:pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto"
       >
         <SectionHeading icon="emoji_events" title="Achievements" />
         <div className="grid grid-cols-1 gap-6">
