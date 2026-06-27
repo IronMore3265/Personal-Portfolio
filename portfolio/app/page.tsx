@@ -416,7 +416,7 @@ export default function Home() {
             Say Hi, <br />
             and let&apos;s connect.
           </h2>
-          <p className="text-body-lg text-on-surface-variant mb-12 reveal-up">
+          <p className="text-body-lg text-on-surface-variant mb-12 reveal-up text-center">
             Have a process to optimize or data to analyze? Reach out and
             let&apos;s chat.
           </p>
