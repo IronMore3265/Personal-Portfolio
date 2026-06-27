@@ -420,9 +420,16 @@ export default function Home() {
             Have a process to optimize or data to analyze? Reach out and
             let&apos;s chat.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6 reveal-up">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 reveal-up">
             <Button href="mailto:nabil.buet20@gmail.com" variant="primary">
               nabil.buet20@gmail.com
+            </Button>
+            <Button
+              href="mailto:nabil.fuadr@gmail.com"
+              variant="secondary"
+              icon="mail"
+            >
+              nabil.fuadr@gmail.com
             </Button>
             <Button
               href="https://www.linkedin.com/in/nabilfuad19"
