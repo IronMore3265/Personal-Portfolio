@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
@@ -12,10 +12,31 @@ const navLinks = [
   { label: "Achievements", href: "/#achievements" },
 ];
 
+// Detail pages that belong under the "Achievements" section; everything
+// else under /projects belongs under "My Projects".
+const achievementSlugs = new Set([
+  "mastermind",
+  "prodluxe",
+  "econovision",
+  "securemed",
+  "securemed-visionx",
+]);
+
+// Maps a non-home route to the nav section that should stay underlined.
+function sectionForPath(path: string): string {
+  if (path === "/projects") return "projects";
+  if (path.startsWith("/projects/")) {
+    const slug = path.split("/")[2];
+    return achievementSlugs.has(slug) ? "achievements" : "projects";
+  }
+  return "";
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const visibleSections = useRef<Set<string>>(new Set());
   const pathname = usePathname();
 
   useEffect(() => {
@@ -38,11 +59,18 @@ export default function Navbar() {
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
 
+    visibleSections.current.clear();
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
+          if (entry.isIntersecting) visibleSections.current.add(entry.target.id);
+          else visibleSections.current.delete(entry.target.id);
         });
+        // First section (in nav order) currently in the band wins; if none
+        // are in view (e.g. scrolled up into the hero), clear the underline.
+        const next = ids.find((id) => visibleSections.current.has(id)) ?? "";
+        setActiveSection(next);
       },
       // Thin band ~40% down the viewport decides the "active" section.
       { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
@@ -73,8 +101,9 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
-              const active =
-                pathname === "/" && activeSection === link.href.split("#")[1];
+              const current =
+                pathname === "/" ? activeSection : sectionForPath(pathname);
+              const active = current === link.href.split("#")[1];
               return (
                 <Link
                   key={link.href}
