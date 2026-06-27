@@ -5,9 +5,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
+const navLinks = [
+  { label: "About Me", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "My Projects", href: "/#projects" },
+  { label: "Achievements", href: "/#achievements" },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -21,12 +29,28 @@ export default function Navbar() {
     setMenuOpen(false);
   }, [pathname]);
 
-  const navLinks = [
-    { label: "About Me", href: "/#about" },
-    { label: "Experience", href: "/#experience" },
-    { label: "My Projects", href: "/#projects" },
-    { label: "Achievements", href: "/#achievements" },
-  ];
+  // Scroll-spy: highlight the nav link for the section currently in view.
+  // Only active on the home page, where these sections exist.
+  useEffect(() => {
+    if (pathname !== "/") return;
+    const ids = navLinks.map((l) => l.href.split("#")[1]);
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      // Thin band ~40% down the viewport decides the "active" section.
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, [pathname]);
 
   return (
     <>
@@ -48,15 +72,28 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-display text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active =
+                pathname === "/" && activeSection === link.href.split("#")[1];
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative font-display text-body-md transition-colors duration-300 ${
+                    active
+                      ? "text-primary"
+                      : "text-on-surface-variant hover:text-primary"
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                      active ? "w-full" : "w-0"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Desktop CTA + Theme Toggle */}
