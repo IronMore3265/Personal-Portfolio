@@ -421,7 +421,7 @@ export default function Home() {
             let&apos;s chat.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 reveal-up">
-            <Button href="mailto:nabil.buet20@gmail.com" variant="primary">
+            <Button href="mailto:nabil.buet20@gmail.com" variant="primary" icon="mail">
               nabil.buet20@gmail.com
             </Button>
             <Button
