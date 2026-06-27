@@ -37,7 +37,23 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const visibleSections = useRef<Set<string>>(new Set());
+  // When a nav link is clicked, lock the underline to its target and ignore
+  // the sections the smooth-scroll passes through until we actually arrive.
+  const activeLock = useRef<string | null>(null);
+  const lockTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
+
+  const handleNavClick = (href: string) => {
+    const id = href.split("#")[1];
+    if (!id) return;
+    activeLock.current = id;
+    setActiveSection(id);
+    if (lockTimer.current) clearTimeout(lockTimer.current);
+    // Safety release in case the target never crosses the detection band.
+    lockTimer.current = setTimeout(() => {
+      activeLock.current = null;
+    }, 1500);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -70,6 +86,16 @@ export default function Navbar() {
         // First section (in nav order) currently in the band wins; if none
         // are in view (e.g. scrolled up into the hero), clear the underline.
         const next = ids.find((id) => visibleSections.current.has(id)) ?? "";
+        // While locked to a clicked target, ignore sections we pass through
+        // and only release once that target reaches the band.
+        if (activeLock.current) {
+          if (next === activeLock.current) {
+            activeLock.current = null;
+            if (lockTimer.current) clearTimeout(lockTimer.current);
+            setActiveSection(next);
+          }
+          return;
+        }
         setActiveSection(next);
       },
       // Thin band ~40% down the viewport decides the "active" section.
@@ -108,6 +134,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={() => handleNavClick(link.href)}
                   className={`relative font-display text-body-md transition-colors duration-300 ${
                     active
                       ? "text-primary"
@@ -176,7 +203,10 @@ export default function Navbar() {
           <Link
             key={link.href}
             href={link.href}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              setMenuOpen(false);
+              handleNavClick(link.href);
+            }}
             className="text-headline-md font-display font-bold text-primary hover:text-on-surface-variant transition-colors"
           >
             {link.label}
