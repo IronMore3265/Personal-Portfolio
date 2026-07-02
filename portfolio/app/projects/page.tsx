@@ -8,7 +8,7 @@ import { PatternGrid } from "@/components/DecorativeElements";
 import { useRevealAnimations } from "@/lib/animations";
 
 type ProjectCategory = "all" | "academic" | "software";
-type SoftwareFilter = "all" | "excel" | "powerbi" | "python";
+type SoftwareFilter = "all" | "excel" | "powerbi" | "python" | "sql";
 
 interface Project {
   tag: string;
@@ -66,6 +66,7 @@ const softwareFilters: { label: string; value: SoftwareFilter }[] = [
   { label: "Microsoft Excel", value: "excel" },
   { label: "Power BI", value: "powerbi" },
   { label: "Python", value: "python" },
+  { label: "SQL", value: "sql" },
 ];
 
 export default function ProjectsPage() {

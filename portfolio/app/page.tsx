@@ -17,6 +17,7 @@ const skills = [
   { name: "Power BI", icon: "/images/powerbi-1.svg" },
   { name: "Python", icon: "/images/python-1.svg" },
   { name: "MATLAB", icon: "/images/matlab-1.svg" },
+  { name: "SQL", icon: "/images/postgresql.svg" },
 ];
 
 const experiences = [
