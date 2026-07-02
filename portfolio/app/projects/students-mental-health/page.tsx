@@ -3,7 +3,6 @@ import ProjectDetailView from "@/components/ProjectDetailView";
 import type { ProjectDetail } from "@/components/ProjectDetailView";
 import { PatternGrid } from "@/components/DecorativeElements";
 import ImageSlider from "@/components/ImageSlider";
-import Button from "@/components/Button";
 
 const title = "Analyzing Students' Mental Health using SQL";
 
@@ -41,11 +40,15 @@ export default function StudentsMentalHealthPage() {
             <p className="text-label-mono text-on-surface-variant mb-6 text-center">
               {detail.subtitle}
             </p>
-            <div className="flex justify-center">
-              <Button href="https://drive.google.com/drive/folders/1_jKECeOoZvqs92gq-KH3j-f66TRr6YRr?usp=sharing" variant="secondary" icon="open_in_new" target="_blank">
-                Project Files
-              </Button>
-            </div>
+            <a
+              href="https://drive.google.com/drive/folders/1_jKECeOoZvqs92gq-KH3j-f66TRr6YRr?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 text-body-md text-sm text-on-surface-variant hover:text-primary transition-colors mt-4"
+            >
+              <span className="material-symbols-outlined text-sm">link</span>
+              Project Files
+            </a>
           </div>
         </div>
       </section>
