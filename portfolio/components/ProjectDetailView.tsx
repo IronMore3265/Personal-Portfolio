@@ -9,7 +9,9 @@ export interface ProjectDetail {
   contribution?: string[];
   highlights?: string[];
   outcomes?: string[];
+  whatIDid?: string[];
   tools: string[];
+  attribution?: string;
 }
 
 export function parseBold(text: string): ReactNode {
@@ -82,6 +84,14 @@ export default function ProjectDetailView({ detail }: { detail: ProjectDetail })
           </section>
         )}
 
+        {/* What I did */}
+        {detail.whatIDid && (
+          <section>
+            <h3 className="text-label-mono text-on-surface mb-3">What I did</h3>
+            <BulletList items={detail.whatIDid} />
+          </section>
+        )}
+
         {/* Highlights */}
         {detail.highlights && (
           <section>
@@ -98,6 +108,13 @@ export default function ProjectDetailView({ detail }: { detail: ProjectDetail })
           </section>
         )}
       </div>
+
+      {/* Attribution Footnote */}
+      {detail.attribution && (
+        <p className="text-xs text-on-surface-variant/70 mt-12 border-t border-outline-variant pt-4">
+          {detail.attribution}
+        </p>
+      )}
     </>
   );
 }

@@ -53,6 +53,16 @@ const projects: Project[] = [
     variant: "featured",
     href: "/projects/reckitt-5s",
   },
+  {
+    tag: "Data Analysis",
+    title: "Analyzing Students' Mental Health — SQL Data Analysis",
+    description:
+      "Used PostgreSQL to analyze international student mental health data, identifying length of stay as a contributing factor to depression, social connectedness, and acculturative stress scores.",
+    category: "software",
+    softwareType: "sql",
+    variant: "featured",
+    href: "/projects/students-mental-health",
+  },
 ];
 
 const categoryFilters: { label: string; value: ProjectCategory }[] = [
