@@ -55,7 +55,7 @@ const projects: Project[] = [
   },
   {
     tag: "Data Analysis",
-    title: "Analyzing Students' Mental Health — SQL Data Analysis",
+    title: "Analyzing Students' Mental Health using SQL",
     description:
       "Used PostgreSQL to analyze international student mental health data, identifying length of stay as a contributing factor to depression, social connectedness, and acculturative stress scores.",
     category: "software",

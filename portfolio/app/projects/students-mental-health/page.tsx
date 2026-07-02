@@ -2,8 +2,14 @@ import BackButton from "@/components/BackButton";
 import ProjectDetailView from "@/components/ProjectDetailView";
 import type { ProjectDetail } from "@/components/ProjectDetailView";
 import { PatternGrid } from "@/components/DecorativeElements";
+import ImageSlider from "@/components/ImageSlider";
+import Button from "@/components/Button";
 
-const title = "Analyzing Students' Mental Health — SQL Data Analysis";
+const title = "Analyzing Students' Mental Health using SQL";
+
+const gallery = [
+  "/images/mentalhealth.jpg",
+];
 
 const detail: ProjectDetail = {
   subtitle: "Guided Project · DataCamp",
@@ -14,9 +20,9 @@ const detail: ProjectDetail = {
     "Computed group-level averages for three validated mental health scores — **PHQ-9** (depression), **SCS** (social connectedness), and **ASISS** (acculturative stress) — segmented by length of stay.",
     "Found patterns consistent with the original published study: longer stays correlated with shifts in depression and stress scores among international students.",
   ],
-  tools: ["PostgreSQL", "SQL", "Data Analysis"],
+  tools: ["SQL", "Data Analysis"],
   attribution:
-    "Project sourced from DataCamp. Original study approved by ethical and regulatory boards.",
+    "Project sourced from DataCamp.",
 };
 
 export default function StudentsMentalHealthPage() {
@@ -27,13 +33,19 @@ export default function StudentsMentalHealthPage() {
         <PatternGrid className="absolute top-10 right-10 w-40 h-40 opacity-30 hidden md:block" />
         <div className="relative z-10">
           <BackButton label="Back to Projects" fallbackHref="/projects" />
-          <div className="text-center mt-8">
+          <ImageSlider slides={gallery} fit="contain" />
+          <div className="text-center mt-4">
             <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">
               {title}
             </h1>
-            <p className="text-label-mono text-on-surface-variant mb-1 text-center">
+            <p className="text-label-mono text-on-surface-variant mb-6 text-center">
               {detail.subtitle}
             </p>
+            <div className="flex justify-center">
+              <Button href="https://drive.google.com/drive/folders/1_jKECeOoZvqs92gq-KH3j-f66TRr6YRr?usp=sharing" variant="secondary" icon="open_in_new" target="_blank">
+                Project Files
+              </Button>
+            </div>
           </div>
         </div>
       </section>
