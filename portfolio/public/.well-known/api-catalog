@@ -1,0 +1,21 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://nabil-pp.vercel.app/",
+      "service-desc": [
+        {
+          "href": "https://nabil-pp.vercel.app/openapi.json",
+          "type": "application/vnd.oai.openapi+json",
+          "title": "Portfolio OpenAPI description"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://nabil-pp.vercel.app/llms.txt",
+          "type": "text/plain",
+          "title": "LLM-friendly site index"
+        }
+      ]
+    }
+  ]
+}

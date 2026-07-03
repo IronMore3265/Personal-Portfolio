@@ -1,0 +1,51 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Nabil Fuad Raiyan — Portfolio",
+    "version": "1.0.0",
+    "summary": "Machine-readable description of the public portfolio surface.",
+    "description": "This portfolio is a static site and does not expose a write API. This description advertises the read-only, publicly cacheable content endpoints (HTML pages, their Markdown representations, and the structured index files) for AI agents and other automated clients.",
+    "contact": { "name": "Nabil Fuad Raiyan", "email": "nfraiyan122002@gmail.com" }
+  },
+  "servers": [{ "url": "https://nabil-pp.vercel.app" }],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Home page",
+        "description": "Landing page. Send Accept: text/markdown or ?format=md to receive the Markdown representation.",
+        "responses": {
+          "200": {
+            "description": "The home page as HTML or Markdown.",
+            "content": {
+              "text/html": {},
+              "text/markdown": {}
+            }
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "summary": "LLM-friendly site index",
+        "description": "Structured index of the site per the llmstxt.org convention.",
+        "responses": {
+          "200": {
+            "description": "Plain-text/Markdown index.",
+            "content": { "text/plain": {} }
+          }
+        }
+      }
+    },
+    "/sitemap.xml": {
+      "get": {
+        "summary": "XML sitemap",
+        "responses": {
+          "200": {
+            "description": "Sitemaps.org XML listing of all canonical URLs.",
+            "content": { "application/xml": {} }
+          }
+        }
+      }
+    }
+  }
+}
