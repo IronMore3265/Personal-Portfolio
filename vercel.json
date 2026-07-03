@@ -2,5 +2,44 @@
   "framework": null,
   "buildCommand": "cd portfolio && npm ci && npm run build",
   "outputDirectory": "portfolio/out",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "header", "key": "accept", "value": ".*text/markdown.*" }],
+      "destination": "/index.md"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "query", "key": "format", "value": "md" }],
+      "destination": "/index.md"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+        }
+      ]
+    },
+    {
+      "source": "/index.md",
+      "headers": [{ "key": "Content-Type", "value": "text/markdown; charset=utf-8" }]
+    },
+    {
+      "source": "/.well-known/api-catalog",
+      "headers": [{ "key": "Content-Type", "value": "application/linkset+json; charset=utf-8" }]
+    },
+    {
+      "source": "/.well-known/oauth-authorization-server",
+      "headers": [{ "key": "Content-Type", "value": "application/json; charset=utf-8" }]
+    },
+    {
+      "source": "/.well-known/oauth-protected-resource",
+      "headers": [{ "key": "Content-Type", "value": "application/json; charset=utf-8" }]
+    }
+  ]
 }
