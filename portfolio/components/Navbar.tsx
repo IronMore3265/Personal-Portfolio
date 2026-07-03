@@ -157,6 +157,7 @@ export default function Navbar() {
             <ThemeToggle />
             <Link
               href="/#contact"
+              onClick={() => handleNavClick("/#contact")}
               className="bg-primary text-on-primary px-6 py-3 font-display font-bold text-label-mono hover:opacity-80 transition-opacity"
             >
               Contact me
@@ -214,7 +215,10 @@ export default function Navbar() {
         ))}
         <Link
           href="/#contact"
-          onClick={() => setMenuOpen(false)}
+          onClick={() => {
+            setMenuOpen(false);
+            handleNavClick("/#contact");
+          }}
           className="mt-4 bg-primary text-on-primary px-8 py-4 font-display font-bold text-label-mono"
         >
           Contact me
