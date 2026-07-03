@@ -56,6 +56,39 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Discovery links for automated / AI agents (D3) */}
+        <link rel="describedby" href="/llms.txt" type="text/plain" />
+        <link rel="api-catalog" href="/.well-known/api-catalog" />
+        {/* Structured data for search engines and AI agents (C3) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Nabil Fuad Raiyan",
+              url: "https://nabil-pp.vercel.app",
+              email: "mailto:nfraiyan122002@gmail.com",
+              jobTitle: "Industrial & Production Engineer / Data Analyst",
+              description:
+                "IPE Graduate from BUET. Blending Lean manufacturing and data-driven problem solving. Process optimizer, data analyst, and organizational leader.",
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: "Bangladesh University of Engineering and Technology (BUET)",
+              },
+              knowsAbout: [
+                "Industrial Engineering",
+                "Lean Manufacturing",
+                "Data Analysis",
+                "Process Optimization",
+                "Excel",
+                "SQL",
+                "Power BI",
+                "Python",
+              ],
+            }),
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
