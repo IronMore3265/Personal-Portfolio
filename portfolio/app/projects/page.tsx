@@ -63,6 +63,16 @@ const projects: Project[] = [
     variant: "featured",
     href: "/projects/students-mental-health",
   },
+  {
+    tag: "Data Analysis",
+    title: "Customer Churn Analysis — Excel Case Study",
+    description:
+      "Analyzed customer churn for a telecom dataset using Excel — built PivotTables, calculated churn rates across demographics, data plans, and contract types, and assembled a final dashboard.",
+    category: "software",
+    softwareType: "excel",
+    variant: "featured",
+    href: "/projects/customer-churn-excel",
+  },
 ];
 
 const categoryFilters: { label: string; value: ProjectCategory }[] = [
