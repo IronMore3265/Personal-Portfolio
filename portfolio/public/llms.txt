@@ -1,0 +1,25 @@
+# Nabil Fuad Raiyan — Portfolio
+
+> Personal portfolio of Nabil Fuad Raiyan, an Industrial & Production Engineering (IPE) graduate from BUET who blends Lean manufacturing with data-driven problem solving. The site showcases engineering, process-optimization, and data-analytics projects.
+
+Nabil works at the intersection of industrial engineering and data analysis: process optimization, Lean/5S implementation, multi-criteria decision analysis, and analytics using Excel, SQL, Power BI, and Python.
+
+## Core pages
+
+- [Home](https://nabil-pp.vercel.app/): Overview, about, experience, projects, and achievements.
+- [All Projects](https://nabil-pp.vercel.app/projects): Full, filterable project catalog (academic and software-based).
+
+## Software & data projects
+
+- [Customer Churn Analysis — Excel Case Study](https://nabil-pp.vercel.app/projects/customer-churn-excel): Telecom churn analysis in Excel using PivotTables, calculated fields, and a dashboard.
+- [Analyzing Students' Mental Health using SQL](https://nabil-pp.vercel.app/projects/students-mental-health): PostgreSQL analysis of international student mental health survey data.
+
+## Engineering & research projects
+
+- [Carbon Emission Optimization in CNC Turning](https://nabil-pp.vercel.app/projects/cnc-turning): Grey Relational Analysis and TOPSIS to cut carbon emissions in CNC turning.
+- [MotoHaul — Motorized Self-Unloading Wheelbarrow](https://nabil-pp.vercel.app/projects/motohaul): Product design with ANSYS validation and a modeled 74% ROI.
+- [5S Workplace Implementation at Reckitt Benckiser](https://nabil-pp.vercel.app/projects/reckitt-5s): Industrial 5S implementation achieving a 16.25% storage capacity increase.
+
+## Contact
+
+- Email: nfraiyan122002@gmail.com
