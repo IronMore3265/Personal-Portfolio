@@ -2,13 +2,19 @@
 
 import { useState } from "react";
 
+type Slide = string | { src: string; fit?: "cover" | "contain" };
+
 interface ImageSliderProps {
-  slides: string[];
+  slides: Slide[];
   fit?: "cover" | "contain";
 }
 
 export default function ImageSlider({ slides, fit = "cover" }: ImageSliderProps) {
   const [index, setIndex] = useState(0);
+
+  const normalized = slides.map((s) =>
+    typeof s === "string" ? { src: s, fit } : { src: s.src, fit: s.fit ?? fit }
+  );
 
   const goTo = (i: number) => setIndex((i + slides.length) % slides.length);
   const prev = () => goTo(index - 1);
@@ -22,7 +28,7 @@ export default function ImageSlider({ slides, fit = "cover" }: ImageSliderProps)
           className="flex h-full transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
-          {slides.map((src, i) => (
+          {normalized.map(({ src, fit: slideFit }, i) => (
             <div key={i} className="relative w-full h-full shrink-0">
               {/\.(mp4|webm|ogg)$/i.test(src) ? (
                 <video
@@ -42,7 +48,7 @@ export default function ImageSlider({ slides, fit = "cover" }: ImageSliderProps)
                   src={src}
                   alt={`Slide ${i + 1}`}
                   loading="lazy"
-                  className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
+                  className={`w-full h-full ${slideFit === "contain" ? "object-contain" : "object-cover"}`}
                 />
               )}
             </div>

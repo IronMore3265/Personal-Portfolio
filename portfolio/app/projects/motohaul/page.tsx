@@ -8,7 +8,7 @@ const title = "MotoHaul — Motorized Self-Unloading Wheelbarrow";
 
 const gallery = [
   "/images/wheelbarrow.jpg",
-  "/images/wheelbarrow%20poster.jpg",
+  { src: "/images/wheelbarrow%20poster.jpg", fit: "contain" as const },
   "/images/group_wheelbarrow.jpg",
   "/images/MotoHaul_Video%20Demonstration.mp4",
 ];
