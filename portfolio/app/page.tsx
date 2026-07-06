@@ -5,6 +5,7 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import ExperienceRow from "@/components/ExperienceRow";
+import ProjectCard from "@/components/ProjectCard";
 import SkillBadge from "@/components/SkillBadge";
 import { PatternGrid, DiagonalLine, GradientBlob } from "@/components/DecorativeElements";
 import {
@@ -231,31 +232,7 @@ export default function Home() {
         <SectionHeading icon="view_cozy" title="My Projects" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {featuredProjects.map((project) => (
-            <Link
-              key={project.href}
-              href={project.href}
-              className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
-            >
-              <div className="flex items-start gap-5">
-                <span className="material-symbols-outlined text-4xl text-primary shrink-0">
-                  {project.icon}
-                </span>
-                <div>
-                  <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
-                    {project.tag}
-                  </span>
-                  <h3 className="font-display text-lg font-bold mt-3 mb-2 text-on-surface">
-                    {project.title}
-                  </h3>
-                  <p className="text-body-md text-on-surface-variant text-sm">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
-                arrow_outward
-              </span>
-            </Link>
+            <ProjectCard key={project.href} {...project} className="reveal-scale" />
           ))}
         </div>
 

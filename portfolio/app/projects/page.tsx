@@ -12,75 +12,70 @@ type SoftwareFilter = "all" | "excel" | "powerbi" | "python" | "sql";
 
 interface Project {
   tag: string;
+  icon: string;
   title: string;
   description: string;
   category: "academic" | "software";
   softwareType?: SoftwareFilter;
-  variant: "light" | "dark" | "featured";
-  colSpan?: number;
-  rowSpan?: number;
-  href?: string;
+  href: string;
 }
 
 const projects: Project[] = [
   {
     tag: "Research",
+    icon: "science",
     title: "Carbon Emission Optimization in CNC Turning",
     description:
       "Optimized CNC turning parameters using Grey Relational Analysis and TOPSIS, cutting carbon emissions by 93% and validated with regression models up to R² 99.97%.",
     category: "academic",
-    variant: "featured",
-    colSpan: 2,
-    rowSpan: 2,
     href: "/projects/cnc-turning",
   },
   {
     tag: "Product Design",
+    icon: "engineering",
     title: "MotoHaul — Motorized Self-Unloading Wheelbarrow",
     description:
       "Motorized, self-unloading wheelbarrow designed to cut manual handling strain for construction and dump-cleaning workers. Led team coordination and validated mechanical durability via ANSYS, with a modeled 74% ROI.",
     category: "academic",
-    variant: "featured",
-    colSpan: 2,
     href: "/projects/motohaul",
   },
   {
     tag: "Industrial",
+    icon: "factory",
     title: "5S Workplace Implementation at Reckitt Benckiser (Bangladesh) PLC",
     description:
       "Led 5S implementation across the Dettol Packaging Area and Harpic Marine Line during an industrial attachment, achieving a 16.25% storage capacity increase.",
     category: "academic",
-    variant: "featured",
     href: "/projects/reckitt-5s",
   },
   {
     tag: "Data Analysis",
+    icon: "analytics",
     title: "Analyzing Students' Mental Health using SQL",
     description:
       "Used PostgreSQL to analyze international student mental health data, identifying length of stay as a contributing factor to depression, social connectedness, and acculturative stress scores.",
     category: "software",
     softwareType: "sql",
-    variant: "featured",
     href: "/projects/students-mental-health",
   },
   {
     tag: "Data Analysis",
+    icon: "analytics",
     title: "Customer Churn Analysis — Excel Case Study",
     description:
       "Analyzed customer churn for a telecom dataset using Excel — built PivotTables, calculated churn rates across demographics, data plans, and contract types, and assembled a final dashboard.",
     category: "software",
     softwareType: "excel",
-    variant: "featured",
     href: "/projects/customer-churn-excel",
   },
   {
     tag: "Data Analysis",
+    icon: "analytics",
     title: "Net Revenue Management (NRM) — FMCG Case Study",
     description:
       "Applied Net Revenue Management (NRM) principles to a shampoo market dataset spanning 2018–2023, identifying growth opportunities worth ~$805K and building a full business case in Excel — from market share analysis to a 2024 revenue forecast.",
     category: "software",
     softwareType: "excel",
-    variant: "featured",
     href: "/projects/net-revenue-management",
   },
 ];
@@ -189,17 +184,15 @@ export default function ProjectsPage() {
 
       {/* Projects Grid */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto pb-24 md:pb-section-gap">
-        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-auto md:auto-rows-[280px] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.title}
+              href={project.href}
+              icon={project.icon}
               tag={project.tag}
               title={project.title}
               description={project.description}
-              variant={project.variant}
-              colSpan={project.colSpan}
-              rowSpan={project.rowSpan}
-              href={project.href}
               className="reveal-scale"
             />
           ))}
