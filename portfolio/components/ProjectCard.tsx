@@ -57,10 +57,12 @@ export default function ProjectCard({
     rowSpan === 2 ? "md:row-span-2" : "",
   ].join(" ");
 
+  const descClamp = rowSpan === 2 ? "line-clamp-6" : "line-clamp-3";
+
   const card = (
     <div
       onClick={onClick}
-      className={`${spanClasses} ${styles.card} p-8 flex flex-col justify-between group transition-colors duration-300 ${interactive ? "cursor-pointer" : ""} ${className}`}
+      className={`${spanClasses} ${styles.card} p-8 flex flex-col justify-between group transition-colors duration-300 overflow-hidden ${interactive ? "cursor-pointer" : ""} ${className}`}
     >
       <div className="flex justify-between items-start">
         <span className={`${styles.tag} text-label-mono px-3 py-1 text-xs`}>
@@ -74,9 +76,9 @@ export default function ProjectCard({
           </span>
         )}
       </div>
-      <div className="mt-auto pt-6">
+      <div className="mt-auto pt-6 min-h-0">
         <h3 className={`font-display font-bold text-lg mb-2 ${styles.title}`}>{title}</h3>
-        <p className={`text-body-md text-sm ${styles.desc}`}>{description}</p>
+        <p className={`text-body-md text-sm ${styles.desc} ${descClamp}`}>{description}</p>
       </div>
     </div>
   );

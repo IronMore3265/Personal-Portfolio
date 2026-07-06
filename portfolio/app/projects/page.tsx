@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
@@ -103,6 +103,16 @@ export default function ProjectsPage() {
   const [category, setCategory] = useState<ProjectCategory>("all");
   const [softwareFilter, setSoftwareFilter] = useState<SoftwareFilter>("all");
   const revealRef = useRevealAnimations([category, softwareFilter]);
+
+  // Deep-link support: /projects?software=excel|powerbi|python|sql
+  useEffect(() => {
+    const sw = new URLSearchParams(window.location.search).get("software");
+    const valid: SoftwareFilter[] = ["excel", "powerbi", "python", "sql"];
+    if (sw && (valid as string[]).includes(sw)) {
+      setCategory("software");
+      setSoftwareFilter(sw as SoftwareFilter);
+    }
+  }, []);
 
   const filteredProjects = projects.filter((p) => {
     if (category === "all") return true;

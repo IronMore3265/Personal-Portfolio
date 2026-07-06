@@ -13,10 +13,10 @@ import {
 } from "@/lib/animations";
 
 const skills = [
-  { name: "MS Excel", icon: "/images/excel-1.svg" },
-  { name: "Power BI", icon: "/images/powerbi-1.svg" },
-  { name: "Python", icon: "/images/python-1.svg" },
-  { name: "SQL", icon: "/images/postgresql.svg" },
+  { name: "MS Excel", icon: "/images/excel-1.svg", href: "/projects?software=excel" },
+  { name: "Power BI", icon: "/images/powerbi-1.svg", href: "/projects?software=powerbi" },
+  { name: "Python", icon: "/images/python-1.svg", href: "/projects?software=python" },
+  { name: "SQL", icon: "/images/postgresql.svg", href: "/projects?software=sql" },
 ];
 
 const experiences = [
@@ -49,6 +49,57 @@ const experiences = [
       "Co-organized chapter events, workshops, and industrial seminars aligned with IEOM's professional development mission.",
       "Coordinated member engagement, inter-chapter outreach, and documentation for one of BUET's active engineering professional societies.",
     ],
+  },
+];
+
+const featuredProjects = [
+  {
+    href: "/projects/cnc-turning",
+    icon: "science",
+    tag: "Research",
+    title: "Carbon Emission Optimization in CNC Turning",
+    description:
+      "Optimized CNC turning parameters using Grey Relational Analysis and TOPSIS, cutting carbon emissions by 93% and validated with regression models up to R² 99.97%.",
+  },
+  {
+    href: "/projects/motohaul",
+    icon: "engineering",
+    tag: "Product Design",
+    title: "MotoHaul — Motorized Self-Unloading Wheelbarrow",
+    description:
+      "Motorized, self-unloading wheelbarrow designed to cut manual handling strain for construction and dump-cleaning workers. Led team coordination and validated mechanical durability via ANSYS, with a modeled 74% ROI.",
+  },
+  {
+    href: "/projects/reckitt-5s",
+    icon: "factory",
+    tag: "Industrial",
+    title: "5S Workplace Implementation at Reckitt Benckiser (Bangladesh) PLC",
+    description:
+      "Led 5S implementation across the Dettol Packaging Area and Harpic Marine Line during an industrial attachment, achieving a 16.25% storage capacity increase.",
+  },
+  {
+    href: "/projects/students-mental-health",
+    icon: "analytics",
+    tag: "Data Analysis",
+    title: "Analyzing Students' Mental Health using SQL",
+    description:
+      "Used PostgreSQL to analyze international student mental health data, identifying length of stay as a contributing factor to depression, social connectedness, and acculturative stress scores.",
+  },
+  {
+    href: "/projects/customer-churn-excel",
+    icon: "analytics",
+    tag: "Data Analysis",
+    title: "Customer Churn Analysis — Excel Case Study",
+    description:
+      "Analyzed customer churn for a telecom dataset using Excel — built PivotTables, calculated churn rates across demographics, data plans, and contract types, and assembled a final dashboard.",
+  },
+  {
+    href: "/projects/net-revenue-management",
+    icon: "analytics",
+    tag: "Data Analysis",
+    title: "Net Revenue Management (NRM) — FMCG Case Study",
+    description:
+      "Applied Net Revenue Management (NRM) principles to a shampoo market dataset spanning 2018–2023, identifying growth opportunities worth ~$805K and building a full business case in Excel — from market share analysis to a 2024 revenue forecast.",
   },
 ];
 
@@ -178,81 +229,34 @@ export default function Home() {
       {/* ===== PROJECTS PREVIEW ===== */}
       <section id="projects" className="py-24 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <SectionHeading icon="view_cozy" title="My Projects" />
-        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-auto md:auto-rows-[280px] gap-6">
-          {/* Featured Project */}
-          <Link
-            href="/projects/cnc-turning"
-            className="md:col-span-2 md:row-span-2 bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
-          >
-            <div className="flex justify-between items-start">
-              <span className="bg-primary text-on-primary text-label-mono px-3 py-1 text-xs">
-                Research
-              </span>
-              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {featuredProjects.map((project) => (
+            <Link
+              key={project.href}
+              href={project.href}
+              className="bg-surface-container border border-outline-variant p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
+            >
+              <div className="flex items-start gap-5">
+                <span className="material-symbols-outlined text-4xl text-primary shrink-0">
+                  {project.icon}
+                </span>
+                <div>
+                  <span className="bg-surface-variant text-label-mono px-3 py-1 text-xs w-fit dark:bg-surface-container-highest">
+                    {project.tag}
+                  </span>
+                  <h3 className="font-display text-lg font-bold mt-3 mb-2 text-on-surface">
+                    {project.title}
+                  </h3>
+                  <p className="text-body-md text-on-surface-variant text-sm">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors shrink-0">
                 arrow_outward
               </span>
-            </div>
-            <div>
-              <h3 className="text-headline-md mb-4 text-on-surface">
-                Carbon Emission Optimization in CNC Turning
-              </h3>
-              <p className="text-body-md text-on-surface-variant max-w-lg">
-                Optimized CNC turning parameters using Grey Relational
-                Analysis and TOPSIS, cutting carbon emissions by 93% and
-                validated with regression models up to R² 99.97%.
-              </p>
-            </div>
-          </Link>
-
-          {/* Small Cards */}
-          <Link
-            href="/projects/motohaul"
-            className="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
-          >
-            <div className="flex justify-between items-start">
-              <span className="bg-primary text-on-primary text-label-mono px-3 py-1 text-xs w-fit">
-                Product Design
-              </span>
-              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
-                arrow_outward
-              </span>
-            </div>
-            <div>
-              <h3 className="font-display text-lg font-bold mb-2 text-on-surface">
-                MotoHaul — Motorized Self-Unloading Wheelbarrow
-              </h3>
-              <p className="text-body-md text-on-surface-variant text-sm">
-                Motorized, self-unloading wheelbarrow designed to cut manual
-                handling strain for construction and dump-cleaning workers. Led
-                team coordination and validated mechanical durability via ANSYS,
-                with a modeled 74% ROI.
-              </p>
-            </div>
-          </Link>
-
-          <Link
-            href="/projects/reckitt-5s"
-            className="bg-surface-container border border-outline-variant p-8 flex flex-col justify-between group hover:border-primary transition-colors duration-300 reveal-scale dark:bg-surface-container-high"
-          >
-            <div className="flex justify-between items-start">
-              <span className="bg-primary text-on-primary text-label-mono px-3 py-1 text-xs w-fit">
-                Industrial
-              </span>
-              <span className="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">
-                arrow_outward
-              </span>
-            </div>
-            <div>
-              <h3 className="font-display text-lg font-bold mb-2 text-on-surface">
-                5S Workplace Implementation at Reckitt Benckiser (Bangladesh) PLC
-              </h3>
-              <p className="text-body-md text-on-surface-variant text-sm">
-                Led 5S implementation across the Dettol Packaging Area and
-                Harpic Marine Line during an industrial attachment, achieving a
-                16.25% storage capacity increase.
-              </p>
-            </div>
-          </Link>
+            </Link>
+          ))}
         </div>
 
         <div className="text-center mt-12 reveal-up">
