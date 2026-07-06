@@ -73,6 +73,16 @@ const projects: Project[] = [
     variant: "featured",
     href: "/projects/customer-churn-excel",
   },
+  {
+    tag: "Data Analysis",
+    title: "Net Revenue Management (NRM) — FMCG Case Study",
+    description:
+      "Applied Net Revenue Management (NRM) principles to a shampoo market dataset spanning 2018–2023, identifying growth opportunities worth ~$805K and building a full business case in Excel — from market share analysis to a 2024 revenue forecast.",
+    category: "software",
+    softwareType: "excel",
+    variant: "featured",
+    href: "/projects/net-revenue-management",
+  },
 ];
 
 const categoryFilters: { label: string; value: ProjectCategory }[] = [

@@ -12,6 +12,7 @@ Nabil Fuad Raiyan is an Industrial & Production Engineering (IPE) graduate from 
 
 - **[Customer Churn Analysis — Excel Case Study](https://nabil-pp.vercel.app/projects/customer-churn-excel)** — Telecom churn analysis in Excel using PivotTables, calculated fields, and a consolidated dashboard.
 - **[Analyzing Students' Mental Health using SQL](https://nabil-pp.vercel.app/projects/students-mental-health)** — PostgreSQL analysis of international student mental health survey data.
+- **[Net Revenue Management (NRM) — FMCG Case Study](https://nabil-pp.vercel.app/projects/net-revenue-management)** — Excel business case applying the five NRM pillars to a shampoo market dataset, with a 2024 revenue forecast.
 - **[Carbon Emission Optimization in CNC Turning](https://nabil-pp.vercel.app/projects/cnc-turning)** — Grey Relational Analysis and TOPSIS, cutting carbon emissions by 93%.
 - **[MotoHaul — Motorized Self-Unloading Wheelbarrow](https://nabil-pp.vercel.app/projects/motohaul)** — Product design validated in ANSYS with a modeled 74% ROI.
 - **[5S Workplace Implementation at Reckitt Benckiser](https://nabil-pp.vercel.app/projects/reckitt-5s)** — Industrial 5S implementation achieving a 16.25% storage capacity increase.

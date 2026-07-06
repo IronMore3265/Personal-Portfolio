@@ -12,6 +12,7 @@ const projectSlugs = [
   "reckitt-5s",
   "students-mental-health",
   "customer-churn-excel",
+  "net-revenue-management",
   "mastermind",
   "prodluxe",
   "econovision",

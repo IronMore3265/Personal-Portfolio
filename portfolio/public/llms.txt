@@ -13,6 +13,7 @@ Nabil works at the intersection of industrial engineering and data analysis: pro
 
 - [Customer Churn Analysis — Excel Case Study](https://nabil-pp.vercel.app/projects/customer-churn-excel): Telecom churn analysis in Excel using PivotTables, calculated fields, and a dashboard.
 - [Analyzing Students' Mental Health using SQL](https://nabil-pp.vercel.app/projects/students-mental-health): PostgreSQL analysis of international student mental health survey data.
+- [Net Revenue Management (NRM) — FMCG Case Study](https://nabil-pp.vercel.app/projects/net-revenue-management): Excel business case applying the five NRM pillars to a shampoo market dataset, with a 2024 revenue forecast.
 
 ## Engineering & research projects
 
