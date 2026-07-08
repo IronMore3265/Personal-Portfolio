@@ -28,6 +28,12 @@ export function scrollToSection(
 ): void {
   const el = document.getElementById(id);
   if (!el) return;
-  const top = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+  // Land on the section's heading, not its border-box top. Sections carry a
+  // large decorative top padding (py-section-gap) that differs per section
+  // (achievements has none), so skipping it keeps every section's heading at a
+  // consistent, tight offset below the sticky navbar.
+  const paddingTop = parseFloat(getComputedStyle(el).paddingTop) || 0;
+  const top =
+    el.getBoundingClientRect().top + window.scrollY + paddingTop - NAV_OFFSET;
   window.scrollTo({ top: Math.max(0, top), behavior });
 }
