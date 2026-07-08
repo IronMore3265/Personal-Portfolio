@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import BackButton from "@/components/BackButton";
 import ProjectCard from "@/components/ProjectCard";
 import SectionHeading from "@/components/SectionHeading";
 import { PatternGrid } from "@/components/DecorativeElements";
@@ -99,15 +99,39 @@ export default function ProjectsPage() {
   const [softwareFilter, setSoftwareFilter] = useState<SoftwareFilter>("all");
   const revealRef = useRevealAnimations([category, softwareFilter]);
 
-  // Deep-link support: /projects?software=excel|powerbi|python|sql
+  const firstSync = useRef(true);
+
+  // Restore the active filter from the URL on mount — covers both skill-badge
+  // deep-links (/projects?software=excel) and Back-navigation returning here.
   useEffect(() => {
-    const sw = new URLSearchParams(window.location.search).get("software");
-    const valid: SoftwareFilter[] = ["excel", "powerbi", "python", "sql"];
-    if (sw && (valid as string[]).includes(sw)) {
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get("category");
+    const sw = params.get("software");
+    const validSw: SoftwareFilter[] = ["excel", "powerbi", "python", "sql"];
+    if (sw && (validSw as string[]).includes(sw)) {
       setCategory("software");
       setSoftwareFilter(sw as SoftwareFilter);
+    } else if (cat === "academic" || cat === "software") {
+      setCategory(cat);
     }
   }, []);
+
+  // Mirror the active filter into the URL (without a navigation) so that
+  // clicking a project and pressing Back returns to this exact filtered view.
+  useEffect(() => {
+    if (firstSync.current) {
+      firstSync.current = false;
+      return;
+    }
+    const params = new URLSearchParams();
+    if (category === "software" && softwareFilter !== "all") {
+      params.set("software", softwareFilter);
+    } else if (category !== "all") {
+      params.set("category", category);
+    }
+    const qs = params.toString();
+    window.history.replaceState(null, "", qs ? `/projects?${qs}` : "/projects");
+  }, [category, softwareFilter]);
 
   const filteredProjects = projects.filter((p) => {
     if (category === "all") return true;
@@ -124,15 +148,7 @@ export default function ProjectsPage() {
       <section className="relative pt-6 md:pt-10 pb-12 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <PatternGrid className="absolute top-10 right-10 w-40 h-40 opacity-30 hidden md:block" />
         <div className="relative z-10">
-          <Link
-            href="/"
-            className="inline-flex items-center text-label-mono text-on-surface-variant hover:text-primary transition-colors mb-8"
-          >
-            <span className="material-symbols-outlined mr-2 text-sm">
-              arrow_back
-            </span>
-            Back to Home
-          </Link>
+          <BackButton label="Back to Home" fallbackHref="/" />
           <SectionHeading icon="view_cozy" title="All Projects" />
         </div>
       </section>
