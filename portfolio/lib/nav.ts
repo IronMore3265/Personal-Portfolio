@@ -5,6 +5,7 @@
 export const SECTION_PATHS: Record<string, string> = {
   "/about": "about",
   "/experience": "experience",
+  "/projects": "projects",
   "/achievements": "achievements",
   "/contact": "contact",
 };

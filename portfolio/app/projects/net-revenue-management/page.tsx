@@ -42,7 +42,7 @@ export default function NetRevenueManagementPage() {
       <section className="relative pt-6 md:pt-10 pb-8 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
         <PatternGrid className="absolute top-10 right-10 w-40 h-40 opacity-30 hidden md:block" />
         <div className="relative z-10">
-          <BackButton label="Back to Projects" fallbackHref="/projects" />
+          <BackButton label="Back to Projects" fallbackHref="/all-projects" />
           {gallery.length > 0 && <ImageSlider slides={gallery} fit="contain" />}
           <div className="text-center mt-4">
             <h1 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-tight">

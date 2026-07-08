@@ -17,7 +17,7 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: "About Me", href: "/about", section: "about", scroll: true },
   { label: "Experience", href: "/experience", section: "experience", scroll: true },
-  { label: "My Projects", href: "/projects", section: "projects", scroll: false },
+  { label: "My Projects", href: "/projects", section: "projects", scroll: true },
   { label: "Achievements", href: "/achievements", section: "achievements", scroll: true },
 ];
 
@@ -40,7 +40,7 @@ const achievementSlugs = new Set([
 
 // Maps a non-home route to the nav section that should stay underlined.
 function sectionForPath(path: string): string {
-  if (path === "/projects") return "projects";
+  if (path === "/all-projects") return "projects";
   if (path.startsWith("/projects/")) {
     const slug = path.split("/")[2];
     return achievementSlugs.has(slug) ? "achievements" : "projects";

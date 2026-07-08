@@ -23,8 +23,8 @@ export default function BackButton({ label, fallbackHref }: BackButtonProps) {
       /* ignore */
     }
     if (!prev) return;
-    if (prev === "/projects") {
-      setOrigin({ label: "Back to Projects", href: "/projects" });
+    if (prev === "/all-projects") {
+      setOrigin({ label: "Back to Projects", href: "/all-projects" });
     } else if (isHomeLike(prev)) {
       setOrigin({ label: "Back to Home", href: "/" });
     }

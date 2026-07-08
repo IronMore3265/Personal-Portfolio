@@ -7,7 +7,7 @@ Nabil works at the intersection of industrial engineering and data analysis: pro
 ## Core pages
 
 - [Home](https://nabil-pp.vercel.app/): Overview, about, experience, projects, and achievements.
-- [All Projects](https://nabil-pp.vercel.app/projects): Full, filterable project catalog (academic and software-based).
+- [All Projects](https://nabil-pp.vercel.app/all-projects): Full, filterable project catalog (academic and software-based).
 
 ## Software & data projects
 

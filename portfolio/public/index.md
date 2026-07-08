@@ -17,7 +17,7 @@ Nabil Fuad Raiyan is an Industrial & Production Engineering (IPE) graduate from 
 - **[MotoHaul — Motorized Self-Unloading Wheelbarrow](https://nabil-pp.vercel.app/projects/motohaul)** — Product design validated in ANSYS with a modeled 74% ROI.
 - **[5S Workplace Implementation at Reckitt Benckiser](https://nabil-pp.vercel.app/projects/reckitt-5s)** — Industrial 5S implementation achieving a 16.25% storage capacity increase.
 
-See the [full project catalog](https://nabil-pp.vercel.app/projects) for everything.
+See the [full project catalog](https://nabil-pp.vercel.app/all-projects) for everything.
 
 ## Contact
 

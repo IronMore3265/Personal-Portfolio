@@ -16,10 +16,10 @@ import {
 } from "@/lib/animations";
 
 const skills = [
-  { name: "MS Excel", icon: "/images/excel-1.svg", href: "/projects?software=excel" },
-  { name: "Power BI", icon: "/images/powerbi-1.svg", href: "/projects?software=powerbi" },
-  { name: "Python", icon: "/images/python-1.svg", href: "/projects?software=python" },
-  { name: "SQL", icon: "/images/postgresql.svg", href: "/projects?software=sql" },
+  { name: "MS Excel", icon: "/images/excel-1.svg", href: "/all-projects?software=excel" },
+  { name: "Power BI", icon: "/images/powerbi-1.svg", href: "/all-projects?software=powerbi" },
+  { name: "Python", icon: "/images/python-1.svg", href: "/all-projects?software=python" },
+  { name: "SQL", icon: "/images/postgresql.svg", href: "/all-projects?software=sql" },
 ];
 
 const experiences = [
@@ -266,7 +266,7 @@ export default function HomeContent({ scrollTo }: { scrollTo?: string }) {
         </div>
 
         <div className="text-center mt-12 reveal-up">
-          <Button href="/projects" variant="secondary" icon="arrow_forward">
+          <Button href="/all-projects" variant="secondary" icon="arrow_forward">
             View All Projects
           </Button>
         </div>
