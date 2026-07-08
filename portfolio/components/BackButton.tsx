@@ -33,18 +33,25 @@ export default function BackButton({ label, fallbackHref }: BackButtonProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     // Returning to the projects grid restores its scroll position and active
-    // filter, so go back through history there. Returning "Home", however,
-    // should land at the top of the page — not restore the mid-page section
-    // (e.g. Achievements) the visitor happened to click from.
+    // filter, so go back through history there.
     if (
       origin.href === "/all-projects" &&
       typeof window !== "undefined" &&
       window.history.length > 1
     ) {
       router.back();
-    } else {
-      router.push(origin.href);
+      return;
     }
+    // Returning Home: restore the scroll position the visitor left from (the
+    // section they clicked into a detail from) rather than jumping to the hero.
+    if (origin.href === "/") {
+      try {
+        sessionStorage.setItem("home:restore", "1");
+      } catch {
+        /* ignore */
+      }
+    }
+    router.push(origin.href);
   };
 
   return (
