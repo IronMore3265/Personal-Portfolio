@@ -8,7 +8,7 @@ interface ButtonProps {
   variant?: ButtonVariant;
   icon?: string;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
   type?: "button" | "submit";
   target?: string;
 }
@@ -68,7 +68,7 @@ export default function Button({
     }
 
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} onClick={onClick}>
         {content}
       </Link>
     );

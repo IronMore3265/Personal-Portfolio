@@ -30,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    ...["about", "experience", "achievements", "contact"].map((s) => ({
+      url: `${BASE_URL}/${s}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: `${BASE_URL}/projects`,
       lastModified,

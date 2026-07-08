@@ -4,13 +4,29 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
+import { isHomeLike, scrollToSection } from "@/lib/nav";
 
-const navLinks = [
-  { label: "About Me", href: "/#about" },
-  { label: "Experience", href: "/#experience" },
-  { label: "My Projects", href: "/#projects" },
-  { label: "Achievements", href: "/#achievements" },
+interface NavLink {
+  label: string;
+  href: string;
+  section: string;
+  // Scroll sections live on the home page; "My Projects" is its own route.
+  scroll: boolean;
+}
+
+const navLinks: NavLink[] = [
+  { label: "About Me", href: "/about", section: "about", scroll: true },
+  { label: "Experience", href: "/experience", section: "experience", scroll: true },
+  { label: "My Projects", href: "/projects", section: "projects", scroll: false },
+  { label: "Achievements", href: "/achievements", section: "achievements", scroll: true },
 ];
+
+const contactLink: NavLink = {
+  label: "Contact me",
+  href: "/contact",
+  section: "contact",
+  scroll: true,
+};
 
 // Detail pages that belong under the "Achievements" section; everything
 // else under /projects belongs under "My Projects".
@@ -43,16 +59,30 @@ export default function Navbar() {
   const lockTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
 
-  const handleNavClick = (href: string) => {
-    const id = href.split("#")[1];
-    if (!id) return;
-    activeLock.current = id;
-    setActiveSection(id);
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    link: NavLink
+  ) => {
+    setMenuOpen(false);
+    if (!link.scroll) return; // e.g. "My Projects" -> navigate to /projects
+    // Only intercept for a smooth in-page scroll when the section is actually
+    // on the current page; otherwise let the Link navigate to its route, which
+    // scrolls to the section on load.
+    if (typeof document === "undefined") return;
+    const el = document.getElementById(link.section);
+    if (!el) return;
+
+    e.preventDefault();
+    activeLock.current = link.section;
+    setActiveSection(link.section);
     if (lockTimer.current) clearTimeout(lockTimer.current);
     // Safety release in case the target never crosses the detection band.
     lockTimer.current = setTimeout(() => {
       activeLock.current = null;
     }, 1500);
+    scrollToSection(link.section);
+    // Clean URL without a reload (integrates with the Next router).
+    window.history.pushState(null, "", link.href);
   };
 
   useEffect(() => {
@@ -67,10 +97,10 @@ export default function Navbar() {
   }, [pathname]);
 
   // Scroll-spy: highlight the nav link for the section currently in view.
-  // Only active on the home page, where these sections exist.
+  // Active on any home-like route, where these sections exist.
   useEffect(() => {
-    if (pathname !== "/") return;
-    const ids = navLinks.map((l) => l.href.split("#")[1]);
+    if (!isHomeLike(pathname)) return;
+    const ids = navLinks.map((l) => l.section);
     const sections = ids
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
@@ -106,6 +136,8 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, [pathname]);
 
+  const current = isHomeLike(pathname) ? activeSection : sectionForPath(pathname);
+
   return (
     <>
       <nav
@@ -127,14 +159,12 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
-              const current =
-                pathname === "/" ? activeSection : sectionForPath(pathname);
-              const active = current === link.href.split("#")[1];
+              const active = current === link.section;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => handleNavClick(link.href)}
+                  onClick={(e) => handleNavClick(e, link)}
                   className={`relative font-display text-body-md transition-colors duration-300 ${
                     active
                       ? "text-primary"
@@ -156,8 +186,8 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
             <Link
-              href="/#contact"
-              onClick={() => handleNavClick("/#contact")}
+              href={contactLink.href}
+              onClick={(e) => handleNavClick(e, contactLink)}
               className="bg-primary text-on-primary px-6 py-3 font-display font-bold text-label-mono hover:opacity-80 transition-opacity"
             >
               Contact me
@@ -204,21 +234,15 @@ export default function Navbar() {
           <Link
             key={link.href}
             href={link.href}
-            onClick={() => {
-              setMenuOpen(false);
-              handleNavClick(link.href);
-            }}
+            onClick={(e) => handleNavClick(e, link)}
             className="text-headline-md font-display font-bold text-primary hover:text-on-surface-variant transition-colors"
           >
             {link.label}
           </Link>
         ))}
         <Link
-          href="/#contact"
-          onClick={() => {
-            setMenuOpen(false);
-            handleNavClick("/#contact");
-          }}
+          href={contactLink.href}
+          onClick={(e) => handleNavClick(e, contactLink)}
           className="mt-4 bg-primary text-on-primary px-8 py-4 font-display font-bold text-label-mono"
         >
           Contact me
